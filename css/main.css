@@ -20,7 +20,7 @@ html {
 }
 
 body {
-    background-color: #f7f7f7;
+    background-color: #fff;
     height: 5000px;
 }
 
@@ -276,6 +276,81 @@ nav .menu li:hover .subnav {
 }
 
 #homeDecor .shopButton button::before {
-    background:rgba(36, 147, 195, 0.8);
+    background:rgba(58, 175, 225, 0.9);
 }
 /* End: home decor */
+
+/* Begin: infor home  */
+#homeInfor {
+    padding: 120px 8%;
+}
+
+#homeInfor container {
+    display: flex;
+    flex-wrap: wrap;
+    gap:12px;
+}
+#homeInfor .inforBox {
+    position: relative;
+    overflow: hidden;
+    text-align: left;
+    flex: 1 1 12px;
+}
+
+#homeInfor .inforBox img {
+    width: 606px;
+    height: 384px;
+}
+
+#homeInfor .inforBox h3 {
+    font-size: 32px;
+    font-weight: 500;
+    margin: 25px 0 15px 0;
+}
+
+#homeInfor .inforBox p {
+    color:rgb(93, 87, 94);
+    font-size: 18px;
+    font-weight: 400px;
+}
+
+#homeInfor .inforBox .learnButton button {
+    padding:16px 42px;
+    border-radius: 8px;
+    background-color: rgb(76, 31, 89);
+    border:2px solid rgb(76, 31, 89);
+    color:#fff;
+    font-weight: 300;
+    margin-top:35px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+}
+
+#homeInfor .inforBox .learnButton button::before {
+    content:'';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 100%;
+    background:#fff;
+    border-radius: 8px;
+    transition: .3s linear;
+    z-index: -1;
+}
+#homeInfor .inforBox .learnButton button:hover::before {
+    width: 100%;
+    left: 0;
+    border:2px solid #fff;
+    border-radius: 8px;
+}
+
+#homeInfor .inforBox .learnButton button:hover{
+    color: rgb(76, 31, 89);
+    border-radius: 8px;
+    border:2px solid rgb(76, 31, 89);
+}
+
+/* End: infor home  */
