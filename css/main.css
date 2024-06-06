@@ -21,13 +21,19 @@ html {
 
 body {
     background-color: #f7f7f7;
-    height: 2000px;
+    height: 5000px;
 }
 
 /* Common  */
 .flex-cen-h {
     display: flex;
     justify-content: center;
+}
+
+.flex-cen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -141,23 +147,26 @@ nav .menu li:hover .subnav {
     filter: brightness(80%);
 }
 
- #home .sliderContent {
+ .content {
     position:absolute; 
-    top: 370px;
     color: #fff;
 }
 
- #home .sliderContent h1 {
+#home .landing {
+    top: 370px;
+}
+
+ .content h1 {
     font-size: 88px;
     font-weight: 500;
 }
 
- #home .sliderContent p {
+ .content p {
     font-size: 20px;
     font-weight: 300;
 }
 
- #home .sliderContent .shopButton button {
+ .content .shopButton button {
     width: 163px;
     height: 57px;
     margin-top:30px;
@@ -171,7 +180,7 @@ nav .menu li:hover .subnav {
     z-index: 0;
 }
 
- #home .sliderContent .shopButton button::before {
+ .content .shopButton button::before {
     content:'';
     position: absolute;
     top: 0;
@@ -182,13 +191,12 @@ nav .menu li:hover .subnav {
     transition: .3s linear;
     z-index: -1;
 }
-
- #home .sliderContent .shopButton button:hover::before {
+ .content .shopButton button:hover::before {
     width: 100%;
     left: 0;
 }
 
- #home .sliderContent .shopButton button:hover{
+ .content .shopButton button:hover{
     color: #fff;
 }
 
@@ -196,7 +204,7 @@ nav .menu li:hover .subnav {
 
 /* Begin: best sellers */
 #bestSellers {
-    padding: 70px 8% 0;
+    padding: 80px 8%;
 }
 #bestSellers h3 {
     color: #000;
@@ -252,5 +260,22 @@ nav .menu li:hover .subnav {
     opacity: .4;
     margin-right:8px;
 }
-
 /* End: best sellers */
+
+/* Begin: home decor */
+#homeDecor {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+#homeDecor img {
+    width: 1440px;
+    height: 720px;
+    filter: brightness(85%);
+}
+
+#homeDecor .shopButton button::before {
+    background:rgba(36, 147, 195, 0.8);
+}
+/* End: home decor */
