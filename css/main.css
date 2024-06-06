@@ -58,21 +58,46 @@ nav a {
 
 nav .menu a:hover {
     color: #000;
-    border-bottom: 2px solid #000;
-    padding-bottom: 3px;
+    border-bottom: 1.5px solid #000;
+    cursor: pointer;
 }
 
 nav .menu .navCart a:hover {
     border: none;
+    cursor: pointer;
 }
 
 nav .menu li {
     display: inline-block;
+    position: relative;
+    padding: 10px 0;
 }
 
 nav .nameShop {
     font-weight: 700;
     font-size: 24px;
+}
+
+nav .menu .subnav{
+    display: none;
+    position: absolute;
+    top:40px;
+    left: 8px;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 5px 0 rgb(0 0 0 / 12%);
+    padding: 10px 0;
+}
+
+nav .menu .subnav li {
+    margin: 0;
+    padding:4px 16px;
+    min-width: 160px;
+}
+
+nav .menu li:hover .subnav {
+    display: block;
+    cursor: pointer;
 }
 
 /* End: header */
@@ -96,7 +121,7 @@ nav .nameShop {
     filter: brightness(100%);
 }
 
-/* Begin: slider */
+/* Begin: landing */
 .sliderHome img {
     position: relative;
     top: 139px;
@@ -161,3 +186,5 @@ nav .nameShop {
 .sliderContent .shopButton button:hover{
     color: #fff;
 }
+
+/* End: landing */
