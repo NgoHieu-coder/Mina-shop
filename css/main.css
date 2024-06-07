@@ -21,7 +21,6 @@ html {
 
 body {
     background-color: #fff;
-    height: 5000px;
 }
 
 /* Common  */
@@ -389,10 +388,16 @@ nav .menu li:hover .iconArrowDown{
 
 #signUp p {
     font-size: 18px;
-    font-weight: 400;
+    font-weight: 300;
     position: absolute;
     top:125px;
     left:230px;
+}
+
+#alertEmail {
+    top:200px !important;
+    left: 230px !important;
+    opacity: 0;
 }
 
 #signUp .shopButton button {
