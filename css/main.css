@@ -20,14 +20,20 @@ html {
 }
 
 body {
-    background-color: #f7f7f7;
-    height: 2000px;
+    background-color: #fff;
+    height: 5000px;
 }
 
 /* Common  */
 .flex-cen-h {
     display: flex;
     justify-content: center;
+}
+
+.flex-cen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -103,6 +109,11 @@ nav .menu li:hover .subnav {
     cursor: pointer;
 }
 
+nav .menu li:hover .iconArrowDown{
+    transform: rotate(180deg);
+    transition: all .1s ease-in-out;
+}
+
 /* End: header */
 
 .freeShipping {
@@ -141,23 +152,26 @@ nav .menu li:hover .subnav {
     filter: brightness(80%);
 }
 
- #home .sliderContent {
+ .content {
     position:absolute; 
-    top: 370px;
     color: #fff;
 }
 
- #home .sliderContent h1 {
+#home .landing {
+    top: 370px;
+}
+
+ .content h1 {
     font-size: 88px;
     font-weight: 500;
 }
 
- #home .sliderContent p {
+ .content p {
     font-size: 20px;
     font-weight: 300;
 }
 
- #home .sliderContent .shopButton button {
+ .content .shopButton button {
     width: 163px;
     height: 57px;
     margin-top:30px;
@@ -171,7 +185,7 @@ nav .menu li:hover .subnav {
     z-index: 0;
 }
 
- #home .sliderContent .shopButton button::before {
+ .content .shopButton button::before {
     content:'';
     position: absolute;
     top: 0;
@@ -182,23 +196,22 @@ nav .menu li:hover .subnav {
     transition: .3s linear;
     z-index: -1;
 }
-
- #home .sliderContent .shopButton button:hover::before {
+ .content .shopButton button:hover::before {
     width: 100%;
     left: 0;
 }
 
- #home .sliderContent .shopButton button:hover{
+ .content .shopButton button:hover{
     color: #fff;
 }
 
 /* End: landing */
 
 /* Begin: best sellers */
-#bestSellers {
-    padding: 70px 8% 0;
+#bestSellers, #insta {
+    padding: 80px 8%;
 }
-#bestSellers h3 {
+#bestSellers h3, #insta h3 {
     color: #000;
     font-size: 48px;
     font-weight: 500;
@@ -252,5 +265,175 @@ nav .menu li:hover .subnav {
     opacity: .4;
     margin-right:8px;
 }
-
 /* End: best sellers */
+
+/* Begin: home decor */
+#homeDecor {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+#homeDecor img {
+    width: 1440px;
+    height: 720px;
+    filter: brightness(85%);
+}
+
+#homeDecor .shopButton button::before {
+    background:rgba(44, 129, 166, 0.9);
+}
+
+#homeDecor .shopButton button {
+    color:rgb(13, 59, 79);
+}
+
+#homeDecor .shopButton button:hover {
+    color:#fff;
+}
+
+/* End: home decor */
+
+/* Begin: infor home  */
+#homeInfor {
+    padding: 120px 8%;
+}
+
+#homeInfor container, #insta container {
+    display: flex;
+    flex-wrap: wrap;
+    gap:12px;
+}
+#homeInfor .inforBox, #insta .imgBox {
+    position: relative;
+    overflow: hidden;
+    text-align: left;
+    flex: 1 1 12px;
+}
+
+#homeInfor .inforBox img {
+    width: 606px;
+    height: 384px;
+}
+
+#homeInfor .inforBox h3 {
+    font-size: 32px;
+    font-weight: 500;
+    margin: 25px 0 15px 0;
+}
+
+#homeInfor .inforBox p {
+    color:rgb(93, 87, 94);
+    font-size: 18px;
+    font-weight: 400px;
+}
+
+#homeInfor .inforBox .learnButton button, #insta .instaButton button  {
+    padding:16px 42px;
+    border-radius: 8px;
+    background-color: rgb(76, 31, 89);
+    border:2px solid rgb(76, 31, 89);
+    color:#fff;
+    font-weight: 300;
+    margin-top:35px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+}
+
+#homeInfor .inforBox .learnButton button::before, #insta .instaButton button::before  {
+    content:'';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 100%;
+    background:#fff;
+    border-radius: 8px;
+    transition: .3s linear;
+    z-index: -1;
+}
+#homeInfor .inforBox .learnButton button:hover::before, #insta .instaButton button:hover::before {
+    width: 100%;
+    left: 0;
+    border:2px solid #fff;
+    border-radius: 8px;
+}
+
+#homeInfor .inforBox .learnButton button:hover, #insta .instaButton button:hover{
+    color: rgb(76, 31, 89);
+    border-radius: 8px;
+    border:2px solid rgb(76, 31, 89);
+}
+/* End: infor home  */
+
+/* Begin: sign up */
+#signUp img {
+    width: 100%;
+    height: 100%;
+    filter: brightness(85%);
+}
+
+#signUp h1 {
+    font-size: 64px;
+    font-weight: 500;
+    margin-bottom: 55px;
+}
+
+#signUp input {
+    padding: 13px 0px 13px 15px;
+    width: 45%;
+    font-size: 14px;
+}
+
+#signUp p {
+    font-size: 18px;
+    font-weight: 400;
+    position: absolute;
+    top:125px;
+    left:230px;
+}
+
+#signUp .shopButton button {
+    height: 52px; 
+    width: 136px;
+    margin-top:25px;
+    border-radius: 8px;
+    color: rgb(31, 89, 49);
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: 400;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+}
+
+#signUp .shopButton button::before {
+    content:'';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 100%;
+    background:rgba(31, 89, 49, 0.8);
+    transition: .3s linear;
+    z-index: -1;
+}
+ #signUp .shopButton button:hover::before {
+    width: 100%;
+    left: 0;
+}
+
+ #signUp .shopButton button:hover{
+    color: #fff;
+}
+
+/* End: sign up */
+
+/* Begin: insta */
+
+#insta .imgBox img {
+    width: 400px;
+}
+/* End: insta */
