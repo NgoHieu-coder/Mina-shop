@@ -1,0 +1,477 @@
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    border: none;
+    outline: none;
+    font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth;
+    line-height: 1.5;
+    font-size: 16px;
+}
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+}
+
+body {
+    background-color: #fff;
+}
+
+/* Common  */
+.flex-cen-h {
+    display: flex;
+    justify-content: center;
+}
+
+.flex-cen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Begin: header */
+header {
+    position: fixed;
+    top: 0px; right: 0px; left: 0px ;
+    z-index: 10;
+    background-color: #fff;
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 5px 0 rgb(0 0 0 / 12%);
+    padding: 16px 8%;
+}
+
+nav li {
+    margin-left: 40px;
+}
+
+nav i {
+    margin: 0px 6px 0px 12px;
+}
+
+nav a {
+    color: #000;
+    font-weight: 300;
+    line-height: 25.6px; 
+}
+
+nav .menu a:hover {
+    border-bottom: 1.5px solid #000;
+    cursor: pointer;
+}
+
+nav .menu .navCart a:hover {
+    border-bottom: none;
+    cursor: pointer;
+}
+
+nav .menu li {
+    display: inline-block;
+    position: relative;
+    padding: 10px 0;
+}
+
+#nameShop {
+    font-weight: 700;
+    font-size: 24px;
+    color:#000;
+}
+
+nav .menu .subnav{
+    display: none;
+    position: absolute;
+    top:40px;
+    left: 22px;
+    border-radius: 4px;
+    background-color: #ffff;
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 5px 0 rgb(0 0 0 / 12%);
+    padding: 10px 0;
+}
+
+nav .menu .subnav li {
+    margin: 0;
+    padding:4px 16px;
+    min-width: 160px;
+}
+
+nav .menu li:hover .subnav {
+    display: block;
+    cursor: pointer;
+}
+
+nav .menu li:hover .iconArrowDown{
+    transform: rotate(180deg);
+    transition: all .1s ease-in-out;
+}
+
+/* End: header */
+
+.freeShipping {
+    position: absolute;
+    top: 80px;
+    right: 0;
+    bottom: auto;
+    left: 0;
+    z-index: -1;
+    overflow: hidden;
+    height: 61px;
+    align-items: center;
+    background: rgb(76, 31, 89);
+    filter: brightness(95%);
+}
+
+.freeShipping p {
+    color:#fff;
+    font-weight: 300;
+    filter: brightness(100%);
+}
+
+/* Begin: landing */
+#home {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 140px 0 0 0;
+}
+
+ #home .sliderHome img {
+    position: relative;
+    z-index: -2;
+    width: 100%;
+    height:675px;
+    filter: brightness(80%);
+}
+
+ .content {
+    position:absolute; 
+    color: #fff;
+}
+
+#home .landing {
+    top: 370px;
+}
+
+ .content h1 {
+    font-size: 88px;
+    font-weight: 500;
+}
+
+ .content p {
+    font-size: 20px;
+    font-weight: 300;
+}
+
+ .content .shopButton button {
+    width: 163px;
+    height: 57px;
+    margin-top:30px;
+    border-radius: 8px;
+    color: rgb(76, 31, 89);
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: 400;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+}
+
+ .content .shopButton button::before {
+    content:'';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 100%;
+    background:rgba(76, 31, 89, 0.5);
+    transition: .3s linear;
+    z-index: -1;
+}
+ .content .shopButton button:hover::before {
+    width: 100%;
+    left: 0;
+}
+
+ .content .shopButton button:hover{
+    color: #fff;
+}
+
+/* End: landing */
+
+/* Begin: best sellers */
+#bestSellers, #insta{
+    padding: 80px 8%;
+}
+#bestSellers h3, #insta h3 {
+    color: #000;
+    font-size: 48px;
+    font-weight: 500;
+}
+#bestSellers .productsBest {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 80px;
+    gap:24px;
+}
+#bestSellers .productsBest .productBox {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    flex: 1 1 24px;
+}
+
+#bestSellers .productsBest .productBox img {
+    width: 288px;
+    transition: all .3s ease-in-out;
+    
+}
+
+#bestSellers .productsBest .productBox:hover img {
+    filter: brightness(80%);
+}
+
+#bestSellers .productsBest .productBox .sale {
+    position: absolute;
+    margin: 8px 0;
+    z-index: 1;
+    padding: 6px 12px;
+    color: #fff;
+    background-color: rgb(111, 23, 135);
+    font-weight: 300;
+}
+
+#bestSellers .productsBest .productBox h3 {
+    margin: 12px 0 2px 0;
+    font-size: 24px;
+}
+
+#bestSellers .productsBest .productBox p {
+    font-size: 18px;
+    font-weight: 300;
+}
+
+#bestSellers .productsBest .productBox p span {
+    text-decoration: line-through;
+    font-size: 18px;
+    opacity: .4;
+    margin-right:8px;
+}
+/* End: best sellers */
+
+/* Begin: home decor */
+#homeDecor {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+#homeDecor img {
+    width: 1440px;
+    height: 720px;
+    filter: brightness(85%);
+}
+
+#homeDecor .shopButton button::before {
+    background:rgba(44, 129, 166, 0.9);
+}
+
+#homeDecor .shopButton button {
+    color:rgb(13, 59, 79);
+}
+
+#homeDecor .shopButton button:hover {
+    color:#fff;
+}
+
+/* End: home decor */
+
+/* Begin: infor home  */
+#homeInfor {
+    padding: 120px 8%;
+}
+
+#homeInfor container, #insta container {
+    display: flex;
+    flex-wrap: wrap;
+    gap:12px;
+}
+#homeInfor .inforBox, #insta .imgBox {
+    position: relative;
+    overflow: hidden;
+    text-align: left;
+    flex: 1 1 12px;
+}
+
+#homeInfor .inforBox img {
+    width: 606px;
+    height: 384px;
+}
+
+#homeInfor .inforBox h3 {
+    font-size: 32px;
+    font-weight: 500;
+    margin: 25px 0 15px 0;
+}
+
+#homeInfor .inforBox p {
+    color:rgb(93, 87, 94);
+    font-size: 18px;
+    font-weight: 400px;
+}
+
+#homeInfor .inforBox .learnButton button, #insta .instaButton button  {
+    padding:16px 42px;
+    border-radius: 8px;
+    background-color: rgb(76, 31, 89);
+    border:2px solid rgb(76, 31, 89);
+    color:#fff;
+    font-weight: 300;
+    margin-top:35px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+}
+
+#homeInfor .inforBox .learnButton button::before, #insta .instaButton button::before  {
+    content:'';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 100%;
+    background:#fff;
+    border-radius: 8px;
+    transition: .3s linear;
+    z-index: -1;
+}
+#homeInfor .inforBox .learnButton button:hover::before, #insta .instaButton button:hover::before {
+    width: 100%;
+    left: 0;
+    border:2px solid #fff;
+    border-radius: 8px;
+}
+
+#homeInfor .inforBox .learnButton button:hover, #insta .instaButton button:hover{
+    color: rgb(76, 31, 89);
+    border-radius: 8px;
+    border:2px solid rgb(76, 31, 89);
+}
+/* End: infor home  */
+
+/* Begin: sign up */
+#signUp img {
+    width: 100%;
+    height: 100%;
+    filter: brightness(90%);
+    scale: 115%;
+}
+
+#signUp h1 {
+    font-size: 64px;
+    font-weight: 500;
+    margin-bottom: 45px;
+    padding-bottom: 55px;
+}
+
+#signUp input {
+    padding: 13px 0px 13px 15px;
+    width: 45%;
+    font-size: 14px;
+    position:absolute;
+    top:132px;
+}
+
+#signUp p {
+    font-size: 18px;
+    font-weight: 300;
+    position: absolute;
+    top:105px;
+    left:230px;
+}
+
+#alertEmail {
+    top:180px !important;
+    left: 230px !important;
+    opacity: 0;
+}
+
+#signUp .shopButton button {
+    height: 52px; 
+    width: 136px;
+    margin-top:25px;
+    border-radius: 8px;
+    color: rgb(31, 89, 49);
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: 400;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+}
+
+#signUp .shopButton button::before {
+    content:'';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 100%;
+    background:rgba(31, 89, 49, 0.8);
+    transition: .3s linear;
+    z-index: -1;
+}
+ #signUp .shopButton button:hover::before {
+    width: 100%;
+    left: 0;
+}
+
+ #signUp .shopButton button:hover{
+    color: #fff;
+}
+
+/* End: sign up */
+
+/* Begin: insta */
+
+#insta .imgBox img {
+    width: 400px;
+}
+/* End: insta */
+
+footer {
+    background-color: rgb(241, 241, 241);
+    /* height: 273px; */
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 8% 30px 8%;
+}
+
+footer .socialFlatform {
+    display:flex;
+    justify-content: space-between;
+    width: 138px;
+    margin-top: 20px;
+}
+
+footer .socialFlatform i {
+    font-size: 24px;
+}
+footer .link li {
+    padding-top:10px;
+}
+
+footer .link a {
+    color: #000;
+    font-size: 18px;
+    text-decoration: underline;
+    font-weight: 400;
+}

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MINA Shop</title>
+    <!--linked css file-->
+   <link rel="stylesheet" href="../css/main.css">
+    <!-- font-icons cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+    <!-- linked font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <!--Header section starts-->
+    <header>
+        <a href="/html/index.html" id="nameShop">MINA</a>
+        <nav>
+            <ul class="menu">
+                <li>
+                    <a href="">Shop</a>
+                    <i class="fa-solid fa-caret-down iconArrowDown " style="font-size: 14px;"></i>
+                    <ul class="subnav">
+                        <li>
+                            <a href="/html/shop.html">All products</a>
+                        </li>
+                        <li>
+                            <a href="/html/new.html">New collection</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="/html/sustainability.html">Sustainability</a>
+                </li>
+                <li>
+                    <a href="/html/about.html">About</a>
+                </li>
+                <li>
+                    <a href="/html/contact.html">Contact</a>
+                </li>
+                <li class="navCart">
+                    <i class="fa-solid fa-bag-shopping" style="font-size: 24px;"></i>
+                    <a href="">Cart (0)</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <!--Header section end-->
+    <div class="freeShipping flex-cen-h">
+        <p>Free shipping on orders over $50 amount</p>
+    </div>
+    <!--Landing section starts-->
+    <section id="home">
+       <div class="sliderHome flex-cen-h">
+          <img src="/img/home.png" alt="vase">
+          <div class="content landing">
+                <h1>Handmade ceramics</h1>
+                <p class="flex-cen-h">Painted clay ceramics made with love.</p>
+                <a class=" shopButton flex-cen-h" href="/html/shop.html">
+                    <button type="submit"> Shop now </button>
+                </a>
+            </div>
+       </div>
+    </section>
+    <!--Landing section end-->    
+
+    <!--Best seller section starts-->
+    <section id="bestSellers">
+        <h3 class="flex-cen-h">Our bestsellers</h3>
+        <container class="productsBest">
+                <div class="productBox">
+                    <span class="sale">SALE</span>
+                    <img src="/img/bestSeller1.avif" alt="vase">
+                    <h3>'Candy' Flowerpot</h3>
+                    <p>
+                        <span>$59.90</span>
+                        $49.90
+                    </p>
+                </div>
+                <div class="productBox">
+                    <span class="sale">SALE</span>
+                    <img src="/img/bestSeller2.avif" alt="vase">
+                    <h3>'Drop' Vase</h3>
+                    <p>
+                        <span>$59.90</span>
+                        $49.90
+                    </p>
+                </div>
+                <div class="productBox">
+                    <img src="/img/bestSeller3.avif" alt="vase">
+                    <h3>'Wave' Vase</h3>
+                    <p>
+                        <span style="text-decoration: none;">SOLD OUT</span>
+                    </p>
+                </div>
+                <div class="productBox">
+                    <img src="/img/bestSeller4.avif" alt="vase">
+                    <h3>'Sun' Vase</h3>
+                    <p>
+                        $69.90
+                    </p>
+                </div>
+        </container>
+    </section>
+    <!--Best seller section end-->
+
+    <!--Home decor section start-->
+    <section id="homeDecor">
+        <div class="flex-cen">
+            <img src="/img/homeDecor.webp" alt="vase">
+            <div class="content decor">
+                  <h1>Home decor items</h1>
+                  <p class="flex-cen-h">Find your new favorite pieces.</p>
+                  <a class=" shopButton flex-cen-h" href="/html/shop.html">
+                      <button type="submit" style="margin-top: 45px;"> Shop now </button>
+                  </a>
+              </div>
+         </div>
+    </section>
+    <!--Home decor section end-->
+
+    <!--Home about section starts-->
+    <section id="homeInfor">
+        <container>
+            <div class="inforBox">
+                <img src="/img/homeAbout.avif" alt="vase">
+                <h3>About Mina</h3>
+                <p>Mina is a brand born out of a passion for ceramics.</p>
+                <a class=" learnButton" href="/html/about.html">
+                    <button type="submit"> Learn more</button>
+                </a>
+            </div>
+            <div class="inforBox">
+                <img src="/img/homeSustainability.avif" alt="vase">
+                <h3>Sustainability</h3>
+                <p>Mina is an eco-friendly brand that cares about sustainability.</p>
+                <a class=" learnButton" href="/html/about.html">
+                    <button type="submit"> Learn more</button>
+                </a>
+            </div>
+        </container>
+    </section>
+    <!--Home about section end-->
+
+    <!--Home sign up section starts-->
+    <section id="signUp">
+        <div class="flex-cen">
+            <img src="/img/signUp.png" alt="vase">
+            <div class="content signUp">
+                  <h1>Sign-up for our newsletter</h1>
+                  <div class="signUp">
+                        <p>Your email</p>
+                       <div class="flex-cen">
+                          <input id="email" class="flex-cen" type="text" placeholder="Your email address">
+                       </div>
+                       <p id="alertEmail">Email is required</p>
+                  </div>
+                  <div class=" shopButton flex-cen-h" href="">
+                      <button id="submitEmail">Submit</button>
+                  </div>    
+            </div>
+        </div>
+    </section>
+     <!--Home sign up section end-->
+
+    <!--Insta section starts-->
+    <section id="insta">
+    <h3 class="flex-cen-h">Follow us on Instagram</h3>
+        <container style="margin-top:40px;">
+                <div class="imgBox">
+                    <img src="/img/insta1.avif" alt="vase">
+                </div>
+                <div class="imgBox">
+                    <img src="/img/insta2.avif" alt="vase">
+                </div>
+                <div class="imgBox">
+                    <img src="/img/insta3.avif" alt="vase">
+                </div>
+        </container>
+        <a class="instaButton flex-cen" style="margin-top:20px;" href="/html/about.html">
+            <button type="submit">@mina_studio</button>
+        </a>
+    </section>
+    <!--Insta section end-->
+
+    <!--Footer starts-->
+    <footer>
+        <div id="social">
+            <p id="nameShop" style="font-size: 32px; font-weight: 600;">MINA</p>
+            <div class="socialFlatform">
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-instagram"></i>
+            </div>
+        </div>
+
+        <div class="link">
+            <ul>
+                <li>
+                    <a href="">Contact</a>
+                </li>
+                <li>
+                    <a href="">Returns</a>
+                </li>
+                <li>
+                    <a href="">Payments & Delivery</a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <!--Footer end-->
+    <script src="../scripts.js"></script>
+</body>
