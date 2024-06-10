@@ -64,7 +64,6 @@ nav a {
 }
 
 nav .menu a:hover {
-    color: #000;
     border-bottom: 1.5px solid #000;
     cursor: pointer;
 }
@@ -80,7 +79,7 @@ nav .menu li {
     padding: 10px 0;
 }
 
-header .nameShop {
+#nameShop {
     font-weight: 700;
     font-size: 24px;
     color:#000;
@@ -207,7 +206,7 @@ nav .menu li:hover .iconArrowDown{
 /* End: landing */
 
 /* Begin: best sellers */
-#bestSellers, #insta {
+#bestSellers, #insta{
     padding: 80px 8%;
 }
 #bestSellers h3, #insta h3 {
@@ -371,31 +370,35 @@ nav .menu li:hover .iconArrowDown{
 #signUp img {
     width: 100%;
     height: 100%;
-    filter: brightness(85%);
+    filter: brightness(90%);
+    scale: 115%;
 }
 
 #signUp h1 {
     font-size: 64px;
     font-weight: 500;
-    margin-bottom: 55px;
+    margin-bottom: 45px;
+    padding-bottom: 55px;
 }
 
 #signUp input {
     padding: 13px 0px 13px 15px;
     width: 45%;
     font-size: 14px;
+    position:absolute;
+    top:132px;
 }
 
 #signUp p {
     font-size: 18px;
     font-weight: 300;
     position: absolute;
-    top:125px;
+    top:105px;
     left:230px;
 }
 
 #alertEmail {
-    top:200px !important;
+    top:180px !important;
     left: 230px !important;
     opacity: 0;
 }
@@ -442,3 +445,33 @@ nav .menu li:hover .iconArrowDown{
     width: 400px;
 }
 /* End: insta */
+
+footer {
+    background-color: rgb(241, 241, 241);
+    /* height: 273px; */
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 8% 30px 8%;
+}
+
+footer .socialFlatform {
+    display:flex;
+    justify-content: space-between;
+    width: 138px;
+    margin-top: 20px;
+}
+
+footer .socialFlatform i {
+    font-size: 24px;
+}
+footer .link li {
+    padding-top:10px;
+}
+
+footer .link a {
+    color: #000;
+    font-size: 18px;
+    text-decoration: underline;
+    font-weight: 400;
+}
