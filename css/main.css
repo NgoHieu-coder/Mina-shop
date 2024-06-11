@@ -448,30 +448,36 @@ nav .menu li:hover .iconArrowDown{
 
 footer {
     background-color: rgb(241, 241, 241);
-    /* height: 273px; */
     display:flex;
     justify-content: space-between;
     align-items: center;
-    padding: 40px 8% 30px 8%;
+    padding: 65px 8% 40px 8%;
+}
+
+#social {
+    margin-left: -8px;
 }
 
 footer .socialFlatform {
     display:flex;
     justify-content: space-between;
     width: 138px;
-    margin-top: 20px;
+    margin: 14px 0 -2px 0;
 }
 
 footer .socialFlatform i {
-    font-size: 24px;
+    font-size: 25px;
+}
+footer .link {
+    margin-right: 110px;
 }
 footer .link li {
-    padding-top:10px;
+    margin-top:12px;
 }
 
 footer .link a {
     color: #000;
     font-size: 18px;
     text-decoration: underline;
-    font-weight: 400;
+    font-weight: 300;
 }
