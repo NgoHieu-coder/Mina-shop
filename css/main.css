@@ -47,6 +47,7 @@ header {
     align-items: center;
     box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 5px 0 rgb(0 0 0 / 12%);
     padding: 16px 8%;
+    width: 100%;
 }
 
 nav li {
@@ -115,12 +116,8 @@ nav .menu li:hover .iconArrowDown{
 /* End: header */
 
 .freeShipping {
-    position: absolute;
-    top: 80px;
-    right: 0;
-    bottom: auto;
-    left: 0;
-    z-index: -1;
+    position: relative;
+    margin-top:80px;
     overflow: hidden;
     height: 61px;
     align-items: center;
@@ -139,14 +136,13 @@ nav .menu li:hover .iconArrowDown{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    padding: 140px 0 0 0;
 }
 
  #home .sliderHome img {
     position: relative;
     z-index: -2;
     width: 100%;
-    height:675px;
+    height:100%;
     filter: brightness(80%);
 }
 
@@ -156,7 +152,7 @@ nav .menu li:hover .iconArrowDown{
 }
 
 #home .landing {
-    top: 370px;
+    top: 340px;
 }
 
  .content h1 {
@@ -273,8 +269,8 @@ nav .menu li:hover .iconArrowDown{
 }
 
 #homeDecor img {
-    width: 1440px;
-    height: 720px;
+    width: 100%;
+    height: 100%;
     filter: brightness(85%);
 }
 
