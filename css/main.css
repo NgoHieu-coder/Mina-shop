@@ -233,7 +233,7 @@ nav .menu li:hover .iconArrowDown{
     filter: brightness(80%);
 }
 
-#bestSellers .productsBest .productBox .sale {
+.sale {
     position: absolute;
     margin: 8px 0;
     z-index: 1;
@@ -243,17 +243,18 @@ nav .menu li:hover .iconArrowDown{
     font-weight: 300;
 }
 
-#bestSellers .productsBest .productBox h3 {
+#bestSellers .productsBest .productBox h3,#shopProducts .allProducts .shopProductBox h3 {
     margin: 12px 0 2px 0;
     font-size: 24px;
+    font-weight: 500;
 }
 
-#bestSellers .productsBest .productBox p {
+#bestSellers .productsBest .productBox p,#shopProducts .allProducts .shopProductBox p {
     font-size: 18px;
     font-weight: 300;
 }
 
-#bestSellers .productsBest .productBox p span {
+#bestSellers .productsBest .productBox p span, #shopProducts .allProducts .shopProductBox p span{
     text-decoration: line-through;
     font-size: 18px;
     opacity: .4;
