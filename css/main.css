@@ -10,17 +10,23 @@
     font-family: "Poppins", sans-serif;
     scroll-behavior: smooth;
     line-height: 1.5;
-    font-size: 16px;
+    font-size: 18px;
+    object-fit: cover;
+    font-weight: 500;
+    cursor: pointer;
 }
 html {
     font-size: 62.5%;
     overflow-x: hidden;
     scroll-behavior: smooth;
     scroll-padding-top: 6rem;
+    
 }
 
 body {
     background-color: #fff;
+    overflow: hidden;
+    
 }
 
 /* Common  */
@@ -35,7 +41,6 @@ body {
     align-items: center;
 }
 
-
 /* Begin: header */
 header {
     position: fixed;
@@ -47,7 +52,6 @@ header {
     align-items: center;
     box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 5px 0 rgb(0 0 0 / 12%);
     padding: 16px 8%;
-    width: 100%;
 }
 
 nav li {
@@ -62,16 +66,15 @@ nav a {
     color: #000;
     font-weight: 300;
     line-height: 25.6px; 
+    font-size: 16px;
 }
 
 nav .menu a:hover {
     border-bottom: 1.5px solid #000;
-    cursor: pointer;
 }
 
 nav .menu .navCart a:hover {
     border-bottom: none;
-    cursor: pointer;
 }
 
 nav .menu li {
@@ -90,7 +93,6 @@ nav .menu .subnav{
     display: none;
     position: absolute;
     top:40px;
-    left: 22px;
     border-radius: 4px;
     background-color: #ffff;
     box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 5px 0 rgb(0 0 0 / 12%);
@@ -105,7 +107,6 @@ nav .menu .subnav li {
 
 nav .menu li:hover .subnav {
     display: block;
-    cursor: pointer;
 }
 
 nav .menu li:hover .iconArrowDown{
@@ -114,7 +115,6 @@ nav .menu li:hover .iconArrowDown{
 }
 
 /* End: header */
-
 .freeShipping {
     position: relative;
     margin-top:80px;
@@ -129,16 +129,11 @@ nav .menu li:hover .iconArrowDown{
     color:#fff;
     font-weight: 300;
     filter: brightness(100%);
+    font-size: 16px;
 }
 
 /* Begin: landing */
-#home {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-}
-
- #home .sliderHome img {
+ #home .sliderHome img, .sliderShop img {
     position: relative;
     z-index: -2;
     width: 100%;
@@ -146,7 +141,7 @@ nav .menu li:hover .iconArrowDown{
     filter: brightness(80%);
 }
 
- .content {
+.content {
     position:absolute; 
     color: #fff;
 }
@@ -155,9 +150,8 @@ nav .menu li:hover .iconArrowDown{
     top: 340px;
 }
 
- .content h1 {
+.content h1 {
     font-size: 88px;
-    font-weight: 500;
 }
 
  .content p {
@@ -165,37 +159,41 @@ nav .menu li:hover .iconArrowDown{
     font-weight: 300;
 }
 
- .content .shopButton button {
+.content .shopButton button {
     width: 163px;
     height: 57px;
     margin-top:30px;
-    border-radius: 8px;
     color: rgb(76, 31, 89);
-    cursor: pointer;
-    font-size: 17px;
-    font-weight: 400;
+}
+
+.content .shopButton button::before {
+    background:rgba(76, 31, 89, 0.5);
+}
+
+ .content .shopButton button,#signUp .shopButton button,#homeInfor .inforBox .learnButton button, #insta .instaButton button  {
+    border-radius: 8px;
+    font-weight: 300;
+    font-size: 16px;
     position: relative;
     overflow: hidden;
     z-index: 0;
 }
-
- .content .shopButton button::before {
+ .content .shopButton button::before, #signUp .shopButton button::before, #homeInfor .inforBox .learnButton button::before, #insta .instaButton button::before {
     content:'';
     position: absolute;
     top: 0;
     right: 0;
     width: 0;
     height: 100%;
-    background:rgba(76, 31, 89, 0.5);
     transition: .3s linear;
     z-index: -1;
 }
- .content .shopButton button:hover::before {
+ .content .shopButton button:hover::before,#signUp .shopButton button:hover::before {
     width: 100%;
     left: 0;
 }
 
- .content .shopButton button:hover{
+ .content .shopButton button:hover,#homeDecor .shopButton button:hover, #signUp .shopButton button:hover{
     color: #fff;
 }
 
@@ -208,7 +206,6 @@ nav .menu li:hover .iconArrowDown{
 #bestSellers h3, #insta h3 {
     color: #000;
     font-size: 48px;
-    font-weight: 500;
 }
 #bestSellers .productsBest {
     display: flex;
@@ -233,7 +230,7 @@ nav .menu li:hover .iconArrowDown{
     filter: brightness(80%);
 }
 
-#bestSellers .productsBest .productBox .sale {
+.sale {
     position: absolute;
     margin: 8px 0;
     z-index: 1;
@@ -243,35 +240,29 @@ nav .menu li:hover .iconArrowDown{
     font-weight: 300;
 }
 
-#bestSellers .productsBest .productBox h3 {
-    margin: 12px 0 2px 0;
+#bestSellers .productsBest .productBox h3,#shopProducts .allProducts .shopProductBox h3 {
+    margin: 12px 0 8px 0;
     font-size: 24px;
+    font-weight: 400;
 }
 
-#bestSellers .productsBest .productBox p {
-    font-size: 18px;
+#bestSellers .productsBest .productBox p, #shopProducts .allProducts .shopProductBox p {
     font-weight: 300;
 }
 
-#bestSellers .productsBest .productBox p span {
+#bestSellers .productsBest .productBox p span, #shopProducts .allProducts .shopProductBox p span{
     text-decoration: line-through;
-    font-size: 18px;
     opacity: .4;
     margin-right:8px;
+    font-weight: 300;
 }
 /* End: best sellers */
 
 /* Begin: home decor */
-#homeDecor {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-}
-
 #homeDecor img {
     width: 100%;
     height: 100%;
-    filter: brightness(85%);
+    filter: brightness(80%);
 }
 
 #homeDecor .shopButton button::before {
@@ -280,10 +271,6 @@ nav .menu li:hover .iconArrowDown{
 
 #homeDecor .shopButton button {
     color:rgb(13, 59, 79);
-}
-
-#homeDecor .shopButton button:hover {
-    color:#fff;
 }
 
 /* End: home decor */
@@ -312,41 +299,27 @@ nav .menu li:hover .iconArrowDown{
 
 #homeInfor .inforBox h3 {
     font-size: 32px;
-    font-weight: 500;
     margin: 25px 0 15px 0;
 }
 
 #homeInfor .inforBox p {
     color:rgb(93, 87, 94);
-    font-size: 18px;
-    font-weight: 400px;
+    font-weight: 300;
+}
+
+#homeInfor .inforBox .learnButton button {
+    padding:16px 42px;
 }
 
 #homeInfor .inforBox .learnButton button, #insta .instaButton button  {
-    padding:16px 42px;
-    border-radius: 8px;
     background-color: rgb(76, 31, 89);
     border:2px solid rgb(76, 31, 89);
     color:#fff;
-    font-weight: 300;
     margin-top:35px;
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
-    z-index: 0;
 }
-
 #homeInfor .inforBox .learnButton button::before, #insta .instaButton button::before  {
-    content:'';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 0;
-    height: 100%;
     background:#fff;
     border-radius: 8px;
-    transition: .3s linear;
-    z-index: -1;
 }
 #homeInfor .inforBox .learnButton button:hover::before, #insta .instaButton button:hover::before {
     width: 100%;
@@ -372,7 +345,6 @@ nav .menu li:hover .iconArrowDown{
 
 #signUp h1 {
     font-size: 64px;
-    font-weight: 500;
     margin-bottom: 45px;
     padding-bottom: 55px;
 }
@@ -381,12 +353,12 @@ nav .menu li:hover .iconArrowDown{
     padding: 13px 0px 13px 15px;
     width: 45%;
     font-size: 14px;
+    font-weight: 300;
     position:absolute;
     top:132px;
 }
 
 #signUp p {
-    font-size: 18px;
     font-weight: 300;
     position: absolute;
     top:105px;
@@ -403,34 +375,11 @@ nav .menu li:hover .iconArrowDown{
     height: 52px; 
     width: 136px;
     margin-top:25px;
-    border-radius: 8px;
     color: rgb(31, 89, 49);
-    cursor: pointer;
-    font-size: 17px;
-    font-weight: 400;
-    position: relative;
-    overflow: hidden;
-    z-index: 0;
 }
 
 #signUp .shopButton button::before {
-    content:'';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 0;
-    height: 100%;
     background:rgba(31, 89, 49, 0.8);
-    transition: .3s linear;
-    z-index: -1;
-}
- #signUp .shopButton button:hover::before {
-    width: 100%;
-    left: 0;
-}
-
- #signUp .shopButton button:hover{
-    color: #fff;
 }
 
 /* End: sign up */
@@ -440,6 +389,11 @@ nav .menu li:hover .iconArrowDown{
 #insta .imgBox img {
     width: 400px;
 }
+
+#insta .instaButton button {
+    padding:12px 37px;
+}
+
 /* End: insta */
 
 footer {
@@ -473,7 +427,6 @@ footer .link li {
 
 footer .link a {
     color: #000;
-    font-size: 18px;
     text-decoration: underline;
     font-weight: 300;
 }

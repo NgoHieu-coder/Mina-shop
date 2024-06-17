@@ -1,0 +1,26 @@
+
+#newLanding img {
+    height: 351px; 
+    max-width: 100%; 
+}
+
+#shopProducts {
+    padding:100px 7.5%;
+}
+
+#shopProducts .allProducts {
+    display: flex;
+    flex-wrap: wrap;
+    gap:24px;
+}
+
+#shopProducts .allProducts .shopProductBox {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    flex: 1 1 30rem;
+}
+
+#shopProducts .allProducts .shopProductBox img {
+    width: 392px;
+}
