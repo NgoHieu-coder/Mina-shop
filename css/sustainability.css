@@ -8,20 +8,20 @@
 .Content_T{
     position: absolute;
     font-size: 88px;
-    font-weight: 500;
+    font-weight: 600;
     color: rgb(255, 255, 255);
-    top: 55%; 
+    top: 320px; 
     left: 50%;
     transform: translate(-50%, -50%);
 } 
 
 .Content_center{
     font-size: 24px;
-    font-weight: 500;
+    font-weight:500;
     width: 606px;
     height: 89.25px;
     text-align: center;
-    margin: 100px 500px;
+    margin: 150px 500px;
 }
 /*-------     ------*/
 .Container_f{
