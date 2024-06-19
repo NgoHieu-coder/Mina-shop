@@ -2,23 +2,24 @@
     position: relative;
     filter: brightness(80%);
     width: 100%; 
-    height: auto; 
+    height: 404px; 
 }
 
 .Content_T{
     position: absolute;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 5em;
-    color: white;
-    top: 50%; 
+    font-size: 88px;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    top: 55%; 
     left: 50%;
-    transform: translate(-50%, -80%);
+    transform: translate(-50%, -50%);
 } 
 
 .Content_center{
-    font-size: 1.2em;
-    width: 32%;
-    height: auto;
+    font-size: 24px;
+    font-weight: 500;
+    width: 606px;
+    height: 89.25px;
     text-align: center;
     margin: 100px 500px;
 }
@@ -28,41 +29,56 @@
     grid-template-columns: 49% 49%;
     grid-gap: 2%
 }
+
 .Content_W-E{
     grid-column: 2;
-    width: 48%;
-    font-size: x-large;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    margin: -380px 0 150px 850px;
 }
 .Content_W-E h1{
-    font-size: 1.8em;
+    grid-column: 1;
+    width: 502.986px;
+    height: 59.514px;
+    font-size: 48px;
+    color: rgb(26, 26, 26);
+    margin: -600px 0 0 920px;
 }
+.Content_1{
+    width: 399.986px;
+    height: 259.125px;
+    font-size: 18px;
+    font-weight: 400;
+    color: rgb(93, 87, 94);
+    margin: 20px 0 0 920px; 
+}
+
 
 .Image_W-E img{
     grid-column: 1;
-    width: 65%;
-    height: auto;
+    max-width: 100%;
+    width: 598px;
+    height: 816.125px;
     object-fit: cover;
-    margin: 0 0 0 260px;
+    margin: 50px 0 0 190px;
 }
 
 .Content_M{
     grid-column: 1;
     width: 26.7%;
     font-size: x-large;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    margin: -380px 0 0 260px;
+    margin: -450px 0 200px 200px;
 }
 .Content_M h1{
     font-size: 1.8em;
 }
+.Content_M p{
+    font-weight: 400;
+    font-size: 18px;
+    color: rgb(93, 87, 94);
+}
 
 .Image_M img{
-    width: 30%;
+    width: 500px;
     height: auto;
     object-fit: cover;
     grid-column: 2;
-    margin-block: 50px;
-    margin-left: 760px;
+    margin: 350px 300px 70px 800px ;
 }
