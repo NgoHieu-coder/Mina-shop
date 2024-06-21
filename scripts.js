@@ -4,7 +4,11 @@ const emailAlert = document.getElementById("alertEmail");
 const menu = document.getElementById("nav__menu");
 const openButton = document.getElementById("navToggle");
 const menuIcon = document.querySelector("#navToggle i");
-console.log(menu);
+const dropdown = document.getElementById("dropdown");
+const subNavList = document.getElementById("subNavList");
+const subnav = document.querySelector(".subnav");
+const dropdownItems = document.querySelector(".dropdownItem");
+console.log(subnav);
 openButton.addEventListener("click", () => {
   menu.style.display = menu.style.display === "block" ? "none" : "block";
   if (menu.style.display === "block") {
@@ -30,4 +34,17 @@ emailInput.addEventListener("input", function (e) {
     submitEmailBtn.style.transform = "translateY(0)";
     emailAlert.style.opacity = "0";
   }
+});
+
+dropdownItems.addEventListener("click", function () {
+  if (subnav.style.maxHeight === "0px" || subnav.style.maxHeight === "") {
+    subnav.style.maxHeight = "1000px";
+    dropdown.style.transform = "rotate(180deg)";
+    subNavList.style.borderLeft = "3px solid rgb(111, 23, 135";
+  } else {
+    subnav.style.maxHeight = "0px";
+    dropdown.style.transform = "rotate(0deg)";
+    subNavList.style.borderLeft = "none";
+  }
+  console.log(subnav.style.maxHeight);
 });

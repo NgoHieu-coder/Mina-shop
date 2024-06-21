@@ -26,7 +26,6 @@ html {
 body {
     background-color: #fff;
     overflow: hidden;
-    
 }
 
 /* Common  */
@@ -70,7 +69,7 @@ nav a {
     font-size: 16px;
 }
 
-nav .menu a:hover {
+nav .menu a:hover, nav .menu a:active {
     border-bottom: 1.5px solid #000;
 }
 
@@ -553,7 +552,6 @@ footer .link a {
         width: 100%;
         height: calc(100vh - 56px);
         
-        
     }
 
     .navMenu::-webkit-scrollbar {
@@ -587,9 +585,10 @@ footer .link a {
     nav .menu a {
         padding:4px 40px 4px 6px;
         border-left: 3px solid transparent ;
+        width: 100%;
     }
 
-    nav .menu a:hover {
+    nav .menu a:active, nav .menu a:hover{
       border-left: 3px solid rgb(111, 23, 135);
       border-bottom: none;
     }
@@ -608,12 +607,7 @@ footer .link a {
     .subnav {
         max-height: 0;
         overflow: hidden;
-        transition: max-height .4s ease-out;
-    }
-
-    .dropdownItem:hover .subnav {
-        max-height: 1000px;
-        transition: max-height .4s ease-in;
+        transition: max-height .2s ease-out;
     }
 
 
@@ -649,7 +643,7 @@ footer .link a {
     }
   
     .freeShipping {
-        margin-top: 67px;
+        margin-top: 70px;
     }
 
     .content h1 {
@@ -721,11 +715,9 @@ footer .link a {
     footer {
         flex-direction: column;
         gap:32px;
+        align-items: flex-start;
     }
     
-    footer .link {
-        margin: 0 0 0 25px;
-    }
 }
 
 @media (max-width: 555px) {
