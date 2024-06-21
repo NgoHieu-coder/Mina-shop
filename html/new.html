@@ -18,38 +18,44 @@
 </head>
 <body>
     <!--Header section starts-->
-        <header>
-         <a href="../index.html" id="nameShop">MINA</a>
-         <nav>
-             <ul class="menu">
-                 <li>
-                     <a href="">Shop</a>
-                     <i class="fa-solid fa-caret-down iconArrowDown " style="font-size: 14px;"></i>
-                     <ul class="subnav">
-                         <li>
-                             <a href="./shop.html">All products</a>
-                         </li>
-                         <li>
-                             <a href="./new.html">New collection</a>
-                         </li>
-                     </ul>
-                 </li>
-                 <li>
-                     <a href="./sustainability.html">Sustainability</a>
-                 </li>
-                 <li>
-                     <a href="./about.html">About</a>
-                 </li>
-                 <li>
-                     <a href="./contact.html">Contact</a>
-                 </li>
-                 <li class="navCart">
-                     <i class="fa-solid fa-bag-shopping" style="font-size: 24px;"></i>
-                     <a href="">Cart (0)</a>
-                 </li>
-             </ul>
-         </nav>
-        </header>
+    <header>
+        <a href="/index.html" id="nameShop">MINA</a>
+
+        <div class="nav__toggle" id="navToggle">
+            <i class="fa-solid fa-bars nav__burger"></i>
+         </div>
+        <nav class="navMenu" >
+            <ul class="menu" id="nav__menu"> <!--Nav list-->
+                <li class="dropdownItem">
+                   <div>
+                    <a class="navLink" href="">Shop</a>
+                    <i class="fa-solid fa-caret-down iconArrowDown " style="font-size: 14px;"></i>
+                   </div>
+                    <ul class="subnav"> <!--dropdown menu-->
+                        <li>
+                            <a class="dropdownLink" href="../html/shop.html">All products</a>
+                        </li>
+                        <li>
+                            <a class="dropdownLink" href="../html/new.html">New collection</a>
+                        </li>
+                    </ul>
+                </li>
+                <li >
+                    <a class="navLink" href="../html/sustainability.html">Sustainability</a>
+                </li>
+                <li>
+                    <a class="navLink" href="../html/about.html">About</a>
+                </li>
+                <li>
+                    <a class="navLink" href="../html/contact.html">Contact</a>
+                </li>
+                <li class="navCart">
+                    <i class="fa-solid fa-bag-shopping" style="font-size: 24px;"></i>
+                    <a href="">Cart (0)</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
     <!--Header section end-->
     <div class="freeShipping flex-cen-h">
         <p>Free shipping on orders over $50 amount</p>
@@ -58,7 +64,7 @@
     <section id="newLanding">
         <div class="sliderShop flex-cen">
             <img src="../img/landingNewCollection.webp" alt="New collection">
-            <div class="content">
+            <div class="content shopTitle">
                 <h1>New Collection</h1>
             </div>
         </div>
@@ -98,10 +104,6 @@
                     $39.90
                 </p>
             </div>
-            <div class="shopProductBox">
-            </div>
-            <div class="shopProductBox">
-            </div>
             
         </container>
     </section>
@@ -133,6 +135,8 @@
         </div>
     </footer>
     <!--Footer end-->
+
+    <script src="../scripts.js"></script>
 </body>
 
 

@@ -54,6 +54,7 @@ header {
     padding: 16px 8%;
 }
 
+/* NAV  */
 nav li {
     margin-left: 40px;
 }
@@ -114,6 +115,10 @@ nav .menu li:hover .iconArrowDown{
     transition: all .1s ease-in-out;
 }
 
+header #navToggle {
+    display: none;
+}
+
 /* End: header */
 .freeShipping {
     position: relative;
@@ -144,10 +149,6 @@ nav .menu li:hover .iconArrowDown{
 .content {
     position:absolute; 
     color: #fff;
-}
-
-#home .landing {
-    top: 340px;
 }
 
 .content h1 {
@@ -280,16 +281,15 @@ nav .menu li:hover .iconArrowDown{
     padding: 120px 8%;
 }
 
-#homeInfor container, #insta container {
-    display: flex;
-    flex-wrap: wrap;
+#homeInfor container{
+    display: grid;
+    grid-template-columns: auto auto;
     gap:12px;
 }
-#homeInfor .inforBox, #insta .imgBox {
+#homeInfor .inforBox{
     position: relative;
     overflow: hidden;
     text-align: left;
-    flex: 1 1 12px;
 }
 
 #homeInfor .inforBox img {
@@ -394,6 +394,17 @@ nav .menu li:hover .iconArrowDown{
     padding:12px 37px;
 }
 
+#insta container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+#insta .imgBox {
+    flex:1 1 12px;
+    overflow: hidden;
+}
+
 /* End: insta */
 
 footer {
@@ -429,4 +440,398 @@ footer .link a {
     color: #000;
     text-decoration: underline;
     font-weight: 300;
+}
+
+/* RESPONSIVE */
+@media (max-width: 991px) {
+    header {
+        padding: 16px 32px;
+    }
+    nav li {
+        margin-left: 20px;
+    }
+    
+    nav i {
+        margin: 3px;
+    }
+
+    .content h1 {
+        font-size: 60px;
+    }
+
+    .content .shopButton button, #signUp .shopButton button  {
+        width: 140px;
+        height: 50px;
+        margin-top: 10px;
+        border-radius: 5px;
+    }
+
+
+    #signUp h1 {
+        font-size: 55px;
+        margin-bottom: 35px;
+        padding-bottom: 45px;
+    }
+
+    #signUp input {
+        top: 110px;
+        border-radius: 4px;
+
+    }
+
+    #signUp p {
+        top: 90px;
+        left: 200px;
+        font-size: 16px;
+    }
+
+    #alertEmail {
+        top: 154px !important;
+        left: 200px !important;
+    }
+
+    
+    #homeInfor container {
+        display: grid;
+        grid-template-columns: auto;
+        gap: 40px;
+
+    }
+
+    #homeInfor .inforBox .learnButton button {
+        margin-top: 15px;
+    }
+
+    #homeInfor .inforBox h3 {
+        font-size: 32px;
+        margin: 15px 0 5px 0;
+    }
+
+    #bestSellers .productsBest {
+        display: grid;
+        grid-template-columns: auto auto;
+        margin-top: 80px;
+        gap: 24px;
+    }
+
+
+    #bestSellers, #insta {
+        padding: 80px 4%;
+    }
+}
+
+@media (max-width: 730px) {
+
+    #nameShop {
+        font-size: 26px;
+    }
+
+    .nav__toggle {
+        display: initial !important;
+        position: relative;
+        width: 32px;
+        height: 32px;
+    }
+      
+    .nav__burger, 
+    .nav__close {
+        position: absolute;
+        width: max-content;
+        height: max-content;
+        inset: 0;
+        margin: auto;
+        font-size: 20px;
+        cursor: pointer;
+        transition: opacity .1s, transform .4s;
+    }
+      
+    
+    .navMenu {
+        position: absolute;
+        left: 0;
+        top: 67px;
+        width: 100%;
+        height: calc(100vh - 56px);
+        
+        
+    }
+
+    .navMenu::-webkit-scrollbar {
+        width: 0;
+    }
+
+    .menu {
+        display: none;
+        background-color: white;
+        padding: 16px 0;
+        border-top: .1rem solid  rgba(0, 0, 0, .1);
+        box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 5px 0 rgb(0 0 0 / 12%);
+        
+    }
+
+    nav .menu .dropdownItem {
+        display: grid !important;
+        grid-template-rows:  auto auto !important;
+        grid-template-columns: 100%;
+        justify-content: space-between;
+        margin: 0px !important;
+        padding: 0px;
+    }
+
+    nav .menu li{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    nav .menu a {
+        padding:4px 40px 4px 6px;
+        border-left: 3px solid transparent ;
+    }
+
+    nav .menu a:hover {
+      border-left: 3px solid rgb(111, 23, 135);
+      border-bottom: none;
+    }
+
+   .dropdownLink {
+    padding: 4px 0 4px 6px !important;
+   }
+
+    .dropdownItem div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding:12px 40px 12px 20px;
+    }
+
+    .subnav {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height .4s ease-out;
+    }
+
+    .dropdownItem:hover .subnav {
+        max-height: 1000px;
+        transition: max-height .4s ease-in;
+    }
+
+
+    .navCart .fa-bag-shopping {
+        display: none;
+    }
+
+    .show-menu {
+        opacity: 1;
+        top: 65px;
+        pointer-events: initial;
+    }
+  
+    .show-icon .nav__burger {
+        opacity: 0;
+        transform: rotate(90deg);
+    }
+    .show-icon .nav__close {
+        opacity: 1;
+        transform: rotate(90deg);
+    }
+
+    nav .menu .subnav {
+        display: flex !important;
+        flex-direction: column;
+        box-shadow: none;
+        position:unset;
+        padding: 0px 40px;
+    }
+
+    nav .menu .subnav li {
+        padding:12px 40px 12px 12px;
+    }
+  
+    .freeShipping {
+        margin-top: 67px;
+    }
+
+    .content h1 {
+        font-size: 45px;
+    }
+
+    .content p {
+        font-size: 16px;
+    }
+    
+    .content .shopButton button, #signUp .shopButton button{
+        width: 140px;
+        height: 40px;
+        margin-top: 10px;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+
+    #signUp h1 {
+        font-size: 40px;
+        margin-bottom: 40px;
+        padding-bottom: 20px;
+    }
+
+    #signUp input {
+        top: 80px;
+        padding: 10px 0px 10px 15px;
+        width: 300px;
+
+    }
+
+    #signUp p {
+        top: 60px;
+        left: 115px;
+        font-size: 16px;
+    }
+
+    #alertEmail {
+        top: 118px !important;
+        left: 115px !important;
+    }
+
+    #signUp ::placeholder{
+        font-size: 16px;
+    }
+
+    #bestSellers .productsBest {
+        grid-template-columns: auto;
+        margin-top: 80px;
+        gap: 24px;
+        margin-top: 50px;
+    }
+
+    #insta h3 {
+        font-size: 40px;
+    }
+
+    #insta container{
+        display: grid;
+        grid-template-columns: auto;
+        gap: 12px;
+    }
+
+    #insta .imgBox {
+        display: flex;
+        justify-content: center;
+    }
+
+    footer {
+        flex-direction: column;
+        gap:32px;
+    }
+    
+    footer .link {
+        margin: 0 0 0 25px;
+    }
+}
+
+@media (max-width: 555px) {
+
+    .content h1 {
+        font-size: 30px;
+    }
+
+    .content p, .freeShipping p {
+        font-size: 12px;
+    }
+
+    .content .shopButton button, #signUp .shopButton button{
+        width: 90px;
+        height: 30px;
+        margin-top: 5px;
+        border-radius: 5px;
+        font-size: 12px;
+    }
+
+    #homeInfor .inforBox .learnButton button {
+        padding: 10px 30px;
+        border-radius: 5px;
+    }
+
+    .freeShipping {
+        height: 55px;
+    }
+
+    #signUp h1 {
+        font-size: 30px;
+        margin-bottom: 25px;
+        padding-bottom: 30px;
+    }
+
+    #signUp input {
+        top: 60px;
+        padding: 8px 0px 8px 15px;
+        width: 250px;
+
+    }
+
+    #signUp p {
+        top:45px;
+        left: 75px;
+        font-size: 12px;
+    }
+
+    #signUp ::placeholder{
+        font-size: 12px;
+    }
+
+    #alertEmail {
+        top: 95px !important;
+        left: 75px !important;
+    }
+
+    #bestSellers h3, #insta h3 {
+        font-size: 30px;
+    }
+
+    #bestSellers .productsBest {
+        margin-top: 50px;
+    }
+
+}
+
+@media (max-width: 430px) {
+
+    #signUp h1 {
+        font-size: 25px;
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+    }
+
+    #signUp input {
+        top: 50px;
+        padding: 2px 0 2px 10px;
+        width: 200px;
+
+    }
+    #signUp ::placeholder{
+        font-size: 10px;
+    }
+
+    #signUp p {
+        top:37px;
+        left: 65px;
+        font-size: 10px;
+    }
+
+    #alertEmail {
+        top: 73px !important;
+        left: 65px !important;
+    }
+
+    #signUp .shopButton button {
+        font-size: 10px;
+    }
+
+    #bestSellers h3, #insta h3 {
+        font-size: 25px;
+    }
+
+    #bestSellers .productsBest {
+        margin-top: 40px;
+    }
+
 }

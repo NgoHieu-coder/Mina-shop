@@ -9,18 +9,42 @@
 }
 
 #shopProducts .allProducts {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    text-align: center;
     gap:24px;
 }
 
 #shopProducts .allProducts .shopProductBox {
     position: relative;
     overflow: hidden;
-    text-align: center;
     flex: 1 1 30rem;
 }
 
 #shopProducts .allProducts .shopProductBox img {
     width: 392px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 991px) {
+    #shopProducts .allProducts {
+        grid-template-columns: auto auto;
+        gap: 24px;
+    }
+}
+
+@media (max-width: 700px) {
+    #shopProducts .allProducts {
+        grid-template-columns: auto;
+        gap: 24px;
+    }
+    #shopProducts {
+        padding: 80px 3%;
+    }
+}
+
+@media (max-width: 555px) {
+    .shopTitle h1 {
+        font-size: 40px !important;
+    }
 }

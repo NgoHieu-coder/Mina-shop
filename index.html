@@ -19,29 +19,35 @@
 <body>
     <!--Header section starts-->
     <header>
-        <a href="./index.html" id="nameShop">MINA</a>
-        <nav>
-            <ul class="menu">
-                <li>
-                    <a href="">Shop</a>
+        <a href="index.html" id="nameShop">MINA</a>
+
+        <div class="nav__toggle" id="navToggle">
+            <i class="fa-solid fa-bars nav__burger"></i>
+         </div>
+        <nav class="navMenu">
+            <ul class="menu" id="nav__menu"> <!--Nav list-->
+                <li class="dropdownItem">
+                   <div>
+                    <a class="navLink" href="">Shop</a>
                     <i class="fa-solid fa-caret-down iconArrowDown " style="font-size: 14px;"></i>
-                    <ul class="subnav">
+                   </div>
+                    <ul class="subnav"> <!--dropdown menu-->
                         <li>
-                            <a href="./html/shop.html">All products</a>
+                            <a class="dropdownLink" href="./html/shop.html">All products</a>
                         </li>
                         <li>
-                            <a href="./html/new.html">New collection</a>
+                            <a class="dropdownLink" href="./html/new.html">New collection</a>
                         </li>
                     </ul>
                 </li>
-                <li>
-                    <a href="./html/sustainability.html">Sustainability</a>
+                <li >
+                    <a class="navLink" href="./html/sustainability.html">Sustainability</a>
                 </li>
                 <li>
-                    <a href="./html/about.html">About</a>
+                    <a class="navLink" href="./html/about.html">About</a>
                 </li>
                 <li>
-                    <a href="./html/contact.html">Contact</a>
+                    <a class="navLink" href="./html/contact.html">Contact</a>
                 </li>
                 <li class="navCart">
                     <i class="fa-solid fa-bag-shopping" style="font-size: 24px;"></i>
@@ -117,7 +123,7 @@
                   <h1>Home decor items</h1>
                   <p class="flex-cen-h">Find your new favorite pieces.</p>
                   <a class=" shopButton flex-cen-h" href="./html/shop.html">
-                      <button type="submit" style="margin-top: 45px;"> Shop now </button>
+                      <button type="submit"> Shop now </button>
                   </a>
               </div>
          </div>
