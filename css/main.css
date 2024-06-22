@@ -548,9 +548,9 @@ footer .link a {
     .navMenu {
         position: absolute;
         left: 0;
-        top: 67px;
+        top: 70px;
         width: 100%;
-        height: calc(100vh - 56px);
+        height: 100%;
         
     }
 
@@ -605,7 +605,7 @@ footer .link a {
     }
 
     .subnav {
-        max-height: 0;
+        max-height: 0px;
         overflow: hidden;
         transition: max-height .2s ease-out;
     }
@@ -639,7 +639,7 @@ footer .link a {
     }
 
     nav .menu .subnav li {
-        padding:12px 40px 12px 12px;
+        padding: 4px 40px 4px 12px;
     }
   
     .freeShipping {

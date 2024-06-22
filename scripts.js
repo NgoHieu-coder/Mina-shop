@@ -7,8 +7,7 @@ const menuIcon = document.querySelector("#navToggle i");
 const dropdown = document.getElementById("dropdown");
 const subNavList = document.getElementById("subNavList");
 const subnav = document.querySelector(".subnav");
-const dropdownItems = document.querySelector(".dropdownItem");
-console.log(subnav);
+console.log(subNavList);
 openButton.addEventListener("click", () => {
   menu.style.display = menu.style.display === "block" ? "none" : "block";
   if (menu.style.display === "block") {
@@ -20,31 +19,35 @@ openButton.addEventListener("click", () => {
   }
 });
 
-submitEmailBtn.addEventListener("click", function () {
-  const email = emailInput.value;
-  if (email.length === 0) {
-    submitEmailBtn.style.transform = "translateY(10px)";
-    emailAlert.style.opacity = "1";
-  }
-});
+if (emailInput) {
+  submitEmailBtn.addEventListener("click", function () {
+    const email = emailInput.value;
+    if (email.length === 0) {
+      submitEmailBtn.style.transform = "translateY(10px)";
+      emailAlert.style.opacity = "1";
+    }
+  });
 
-emailInput.addEventListener("input", function (e) {
-  const email = e.target.value;
-  if (email.length > 0) {
-    submitEmailBtn.style.transform = "translateY(0)";
-    emailAlert.style.opacity = "0";
-  }
-});
+  emailInput.addEventListener("input", function (e) {
+    const email = e.target.value;
+    if (email.length > 0) {
+      submitEmailBtn.style.transform = "translateY(0)";
+      emailAlert.style.opacity = "0";
+    }
+  });
+}
 
-dropdownItems.addEventListener("click", function () {
-  if (subnav.style.maxHeight === "0px" || subnav.style.maxHeight === "") {
-    subnav.style.maxHeight = "1000px";
-    dropdown.style.transform = "rotate(180deg)";
-    subNavList.style.borderLeft = "3px solid rgb(111, 23, 135";
-  } else {
-    subnav.style.maxHeight = "0px";
-    dropdown.style.transform = "rotate(0deg)";
-    subNavList.style.borderLeft = "none";
-  }
-  console.log(subnav.style.maxHeight);
-});
+if (window.innerWidth < 730) {
+  subNavList.addEventListener("click", function () {
+    if (subnav.style.maxHeight === "0px" || subnav.style.maxHeight === "") {
+      subnav.style.maxHeight = "1000px";
+      dropdown.style.transform = "rotate(180deg)";
+      subNavList.style.borderLeft = "3px solid rgb(111, 23, 135";
+    } else {
+      subnav.style.maxHeight = "0px";
+      dropdown.style.transform = "rotate(0deg)";
+      subNavList.style.borderLeft = "none";
+    }
+    console.log(subnav.style.maxHeight);
+  });
+}
