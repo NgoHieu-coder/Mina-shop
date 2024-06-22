@@ -69,7 +69,7 @@ nav a {
     font-size: 16px;
 }
 
-nav .menu a:hover, nav .menu a:active {
+nav .menu a:hover, nav .menu a:active{
     border-bottom: 1.5px solid #000;
 }
 
@@ -114,10 +114,49 @@ nav .menu li:hover .iconArrowDown{
     transition: all .1s ease-in-out;
 }
 
-header #navToggle {
+header .icons {
     display: none;
 }
 
+header .cartBox {
+    position: absolute;
+    top:100%; 
+    right:0;
+    height: calc(100vh - 70px);
+    padding: 0 24px;
+    width: 300px;
+    background: #fff;
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 5px 0 rgb(0 0 0 / 12%);
+    display: none;
+    z-index: 2;
+}
+header .cartBox.active {
+    display: flex;
+    justify-content: center; 
+}
+
+.cartBox h5 {
+    margin-top: 120px;
+}
+
+
+.fa-xmark {
+    position: absolute;
+    right: 24px;
+    top:16px;
+}
+
+.cartBox-overlay {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #27262653;
+    pointer-events: none;
+    z-index: 3; 
+    display: none;
+  }
 /* End: header */
 .freeShipping {
     position: relative;
@@ -525,15 +564,20 @@ footer .link a {
         font-size: 26px;
     }
 
-    .nav__toggle {
-        display: initial !important;
+    .icons {
+        display: flex !important;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .nav__toggle, .nav__shop {
         position: relative;
         width: 32px;
         height: 32px;
     }
       
     .nav__burger, 
-    .nav__close {
+    .nav__close , .fa-bag-shopping{
         position: absolute;
         width: max-content;
         height: max-content;
@@ -611,8 +655,8 @@ footer .link a {
     }
 
 
-    .navCart .fa-bag-shopping {
-        display: none;
+    .navCart {
+        display: none !important;
     }
 
     .show-menu {
@@ -718,6 +762,7 @@ footer .link a {
         align-items: flex-start;
     }
     
+    
 }
 
 @media (max-width: 555px) {
@@ -744,7 +789,7 @@ footer .link a {
     }
 
     .freeShipping {
-        height: 55px;
+        height: 45px;
     }
 
     #signUp h1 {
@@ -826,4 +871,8 @@ footer .link a {
         margin-top: 40px;
     }
 
+    header .cartBox.active {
+        width: 100%;
+        
+    }
 }

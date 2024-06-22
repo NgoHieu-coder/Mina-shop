@@ -17,12 +17,18 @@
 </head>
 
 <body>
+    <div class="cartBox-overlay"></div>
    <!--Header section starts-->
    <header>
     <a href="index.html" id="nameShop">MINA</a>
-
-    <div class="nav__toggle" id="navToggle">
-      <i class="fa-solid fa-bars nav__burger"></i>
+   
+    <div class="icons"> <!-- nav responsive -->
+        <div class="nav__shop">
+            <i class="fa-solid fa-bag-shopping"></i>
+        </div>
+        <div class="nav__toggle" id="navToggle">
+            <i class="fa-solid fa-bars nav__burger"></i>
+        </div>
     </div>
     <nav class="navMenu">
       <ul class="menu" id="nav__menu">
@@ -49,9 +55,7 @@
           </ul>
         </li>
         <li>
-          <a class="navLink" href="./html/sustainability.html"
-            >Sustainability</a
-          >
+          <a class="navLink" href="./html/sustainability.html">Sustainability</a>
         </li>
         <li>
           <a class="navLink" href="./html/about.html">About</a>
@@ -61,10 +65,14 @@
         </li>
         <li class="navCart">
           <i class="fa-solid fa-bag-shopping" style="font-size: 24px"></i>
-          <a href="">Cart (0)</a>
+          <a>Cart (0)</a>
         </li>
       </ul>
     </nav>
+    <div class="cartBox">
+        <i class="fa-solid fa-xmark"></i>
+        <h5>Shopping bag is empty</h5>
+    </div>
   </header>
   <!--Header section end-->
         <div class="freeShipping flex-cen-h">
