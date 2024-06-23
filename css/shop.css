@@ -1,8 +1,14 @@
 
-#newLanding img {
-    height: 351px; 
-    max-width: 100%; 
+#shopLanding {
+    background: url(../img/landingshop.avif) center / cover no-repeat;
+    min-height: 45vh;
 }
+
+#newLanding {
+    background: url(../img/landingNewCollection.webp) center / cover no-repeat;
+    min-height: 50vh;
+}
+
 
 #shopProducts {
     padding:100px 7.5%;
@@ -38,13 +44,15 @@
         grid-template-columns: auto;
         gap: 24px;
     }
-    #shopProducts {
-        padding: 80px 10%;
+    #shopLanding {
+        min-height: 35vh;
     }
 }
 
-@media (max-width: 555px) {
-    .shopTitle h1 {
-        font-size: 40px !important;
+
+
+@media (max-width: 600px) {
+    #shopProducts .allProducts .shopProductBox img {
+        width: 300px;
     }
 }

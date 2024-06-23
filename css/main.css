@@ -166,28 +166,48 @@ header .icons {
     height: 61px;
     align-items: center;
     background: rgb(76, 31, 89);
-    filter: brightness(95%);
 }
 
 .freeShipping p {
     color:#fff;
     font-weight: 300;
-    filter: brightness(100%);
-    font-size: 16px;
+    font-size: 18px;
+    text-align: center;
 }
 
 /* Begin: landing */
- #home .sliderHome img, .sliderShop img {
+
+#home .sliderHome {
+    background: url(../img/home.png) center / cover no-repeat;
+    min-height: 85vh !important;
+}
+
+#homeDecor, #signUp,#home .sliderHome , #shopLanding, #newLanding {
     position: relative;
-    z-index: -2;
+    z-index: 1;
+    min-height: 100vh;
+    height: 100%;
     width: 100%;
-    height:100%;
-    filter: brightness(80%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#homeDecor::before, #signUp::before,#home .sliderHome::before,#shopLanding::before,#newLanding::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2); 
+    z-index: -1; 
 }
 
 .content {
     position:absolute; 
     color: #fff;
+    
 }
 
 .content h1 {
@@ -197,6 +217,7 @@ header .icons {
  .content p {
     font-size: 20px;
     font-weight: 300;
+    text-align: center;
 }
 
 .content .shopButton button {
@@ -246,6 +267,7 @@ header .icons {
 #bestSellers h3, #insta h3 {
     color: #000;
     font-size: 48px;
+    text-align: center;
 }
 #bestSellers .productsBest {
     display: flex;
@@ -299,10 +321,26 @@ header .icons {
 /* End: best sellers */
 
 /* Begin: home decor */
-#homeDecor img {
+
+#homeDecor, #signUp {
+    position: relative;
+    z-index: 1;
+    min-height: 80vh;
+}
+
+#homeDecor {
+    background: url(../img/homeDecor.webp) center / cover no-repeat;
+}
+
+#homeDecor::before, #signUp::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    filter: brightness(80%);
+    background-color: rgba(0, 0, 0, 0.2); 
+    z-index: -1; 
 }
 
 #homeDecor .shopButton button::before {
@@ -375,11 +413,9 @@ header .icons {
 /* End: infor home  */
 
 /* Begin: sign up */
-#signUp img {
-    width: 100%;
-    height: 100%;
-    filter: brightness(90%);
-    scale: 115%;
+
+#signUp {
+    background: url(../img/signUp.png) center / cover no-repeat;
 }
 
 #signUp h1 {
@@ -394,26 +430,14 @@ header .icons {
     font-size: 14px;
     font-weight: 300;
     position:absolute;
-    top:132px;
-}
-
-#signUp p {
-    font-weight: 300;
-    position: absolute;
-    top:105px;
-    left:230px;
-}
-
-#alertEmail {
-    top:180px !important;
-    left: 230px !important;
-    opacity: 0;
+    top:50%;
+    border-radius: 4px;
 }
 
 #signUp .shopButton button {
     height: 52px; 
     width: 136px;
-    margin-top:25px;
+    margin-top:5px;
     color: rgb(31, 89, 49);
 }
 
@@ -483,6 +507,9 @@ footer .link a {
 
 /* RESPONSIVE */
 @media (max-width: 991px) {
+    #homeDecor, #signUp {
+        min-height: 60vh;
+    } 
     header {
         padding: 16px 32px;
     }
@@ -495,7 +522,12 @@ footer .link a {
     }
 
     .content h1 {
-        font-size: 60px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        font-size: 80px;
+        line-height: 75px;
+       
     }
 
     .content .shopButton button, #signUp .shopButton button  {
@@ -508,25 +540,12 @@ footer .link a {
 
     #signUp h1 {
         font-size: 55px;
-        margin-bottom: 35px;
+        margin-bottom: 50px;
         padding-bottom: 45px;
     }
 
     #signUp input {
-        top: 110px;
-        border-radius: 4px;
-
-    }
-
-    #signUp p {
-        top: 90px;
-        left: 200px;
-        font-size: 16px;
-    }
-
-    #alertEmail {
-        top: 154px !important;
-        left: 200px !important;
+        top: 45%;
     }
 
     
@@ -557,9 +576,22 @@ footer .link a {
     #bestSellers, #insta {
         padding: 80px 4%;
     }
+
+    #insta .imgBox img {
+        width: 300px;
+    }
+
 }
 
 @media (max-width: 730px) {
+
+    .content {
+        margin: 0 50px;
+    }
+    .content h1 {
+        font-size: 65px;
+        line-height: 65px;
+    }
 
     #nameShop {
         font-size: 26px;
@@ -691,48 +723,26 @@ footer .link a {
         margin-top: 70px;
     }
 
-    .content h1 {
-        font-size: 45px;
-    }
 
-    .content p {
-        font-size: 16px;
-    }
     
     .content .shopButton button, #signUp .shopButton button{
         width: 140px;
-        height: 40px;
-        margin-top: 10px;
         border-radius: 5px;
         font-size: 16px;
     }
 
     #signUp h1 {
-        font-size: 40px;
-        margin-bottom: 40px;
+        font-size: 50px;
+        margin-bottom: 60px;
         padding-bottom: 20px;
+        line-height: 55px;
     }
 
     #signUp input {
-        top: 80px;
+        top: 55%;
         padding: 10px 0px 10px 15px;
         width: 300px;
 
-    }
-
-    #signUp p {
-        top: 60px;
-        left: 115px;
-        font-size: 16px;
-    }
-
-    #alertEmail {
-        top: 118px !important;
-        left: 115px !important;
-    }
-
-    #signUp ::placeholder{
-        font-size: 16px;
     }
 
     #bestSellers .productsBest {
@@ -740,10 +750,6 @@ footer .link a {
         margin-top: 80px;
         gap: 24px;
         margin-top: 50px;
-    }
-
-    #insta h3 {
-        font-size: 40px;
     }
 
     #insta container{
@@ -757,6 +763,10 @@ footer .link a {
         justify-content: center;
     }
 
+    #insta .imgBox img {
+        width: 70%;
+    }
+
     footer {
         flex-direction: column;
         gap:32px;
@@ -768,18 +778,13 @@ footer .link a {
 
 @media (max-width: 555px) {
 
-    .content h1 {
-        font-size: 30px;
+    .content {
+        margin: 0;
     }
-
-    .content p, .freeShipping p {
-        font-size: 12px;
-    }
+    
 
     .content .shopButton button, #signUp .shopButton button{
-        width: 90px;
-        height: 30px;
-        margin-top: 5px;
+        width: 120px;
         border-radius: 5px;
         font-size: 12px;
     }
@@ -789,87 +794,47 @@ footer .link a {
         border-radius: 5px;
     }
 
-    .freeShipping {
-        height: 45px;
-    }
-
-    #signUp h1 {
-        font-size: 30px;
-        margin-bottom: 25px;
-        padding-bottom: 30px;
-    }
-
-    #signUp input {
-        top: 60px;
-        padding: 8px 0px 8px 15px;
-        width: 250px;
-
-    }
-
-    #signUp p {
-        top:45px;
-        left: 75px;
-        font-size: 12px;
-    }
-
-    #signUp ::placeholder{
-        font-size: 12px;
-    }
-
-    #alertEmail {
-        top: 95px !important;
-        left: 75px !important;
-    }
 
     #bestSellers h3, #insta h3 {
-        font-size: 30px;
+        font-size: 45px;
+    }
+    #signUp .shopButton button,.content .shopButton button {
+        height: 40px; 
+        width: 100px;
     }
 
-    #bestSellers .productsBest {
-        margin-top: 50px;
+    #homeInfor .inforBox img {
+        width: 450px;
+        height: 300px;
     }
 
 }
 
 @media (max-width: 430px) {
+    .content h1 {
+        font-size: 55px;
+        line-height: 60px;
+    }
+
+    .freeShipping p {
+        margin:0 30px;
+    }
+
+    .content p {
+        font-size: 18px;
+    }
 
     #signUp h1 {
-        font-size: 25px;
-        margin-bottom: 20px;
-        padding-bottom: 20px;
+        font-size: 45px;
+        margin-bottom: 35px;
+        padding-bottom: 30px;
     }
 
     #signUp input {
-        top: 50px;
-        padding: 2px 0 2px 10px;
-        width: 200px;
+        top: 55%;
+        padding: 8px 0px 8px 15px;
+        width: 250px;
 
-    }
-    #signUp ::placeholder{
-        font-size: 10px;
-    }
-
-    #signUp p {
-        top:37px;
-        left: 65px;
-        font-size: 10px;
-    }
-
-    #alertEmail {
-        top: 73px !important;
-        left: 65px !important;
-    }
-
-    #signUp .shopButton button {
-        font-size: 10px;
-    }
-
-    #bestSellers h3, #insta h3 {
-        font-size: 25px;
-    }
-
-    #bestSellers .productsBest {
-        margin-top: 40px;
     }
 
     .cartBox.active {
