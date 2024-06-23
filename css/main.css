@@ -803,6 +803,10 @@ footer .link a {
         grid-template-columns: auto;
     }
 
+    .freeShipping {
+        height: 70px;
+    }
+
 
 }
 
