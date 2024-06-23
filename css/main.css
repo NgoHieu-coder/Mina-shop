@@ -805,11 +805,11 @@ footer .link a {
 
     .freeShipping {
         height: 80px;
-        padding: 0 40px;
+        padding: 0 30px;
     }
 
     #home .sliderHome {
-        min-height: 60vh !important;
+        min-height: 70vh !important;
     }
 
 
