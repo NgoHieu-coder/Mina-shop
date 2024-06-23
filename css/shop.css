@@ -24,11 +24,11 @@
 #shopProducts .allProducts .shopProductBox {
     position: relative;
     overflow: hidden;
-    flex: 1 1 30rem;
+    transition: all .3s ease-in-out;
 }
 
 #shopProducts .allProducts .shopProductBox img {
-    width: 392px;
+    width: 380px;
 }
 
 /* RESPONSIVE */
@@ -48,8 +48,6 @@
         min-height: 35vh;
     }
 }
-
-
 
 @media (max-width: 600px) {
     #shopProducts .allProducts .shopProductBox img {

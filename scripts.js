@@ -13,19 +13,7 @@ const closeIcon = document.querySelector(".fa-xmark");
 const overlay = document.querySelector(".cartBox-overlay");
 console.log(subNavList);
 
-openButton.addEventListener("click", () => {
-  cartBox.classList.remove("active");
-  overlay.style.display = "none";
-  menu.style.display = menu.style.display === "block" ? "none" : "block";
-  if (menu.style.display === "block") {
-    menuIcon.classList.remove("fa-bars", "nav__burger");
-    menuIcon.classList.add("fa-xmark", "nav__close");
-  } else {
-    menuIcon.classList.add("fa-bars", "nav__burger");
-    menuIcon.classList.remove("fa-xmark", "nav__close");
-  }
-});
-
+//EMAIL INPUT
 if (emailInput) {
   submitEmailBtn.addEventListener("click", function () {
     const email = emailInput.value;
@@ -43,7 +31,23 @@ if (emailInput) {
   });
 }
 
+// MENU BAR
+openButton.addEventListener("click", () => {
+  cartBox.classList.remove("active");
+  overlay.style.display = "none";
+  menu.style.display = menu.style.display === "block" ? "none" : "block";
+  if (menu.style.display === "block") {
+    menuIcon.classList.remove("fa-bars", "nav__burger");
+    menuIcon.classList.add("fa-xmark", "nav__close");
+  } else {
+    menuIcon.classList.add("fa-bars", "nav__burger");
+    menuIcon.classList.remove("fa-xmark", "nav__close");
+  }
+});
+
+// NAV MENU RESPONSIVE
 if (window.innerWidth < 730) {
+  // SUBMENU
   subNavList.addEventListener("click", function () {
     if (subnav.style.maxHeight === "0px" || subnav.style.maxHeight === "") {
       subnav.style.maxHeight = "1000px";
@@ -57,6 +61,7 @@ if (window.innerWidth < 730) {
     console.log(subnav.style.maxHeight);
   });
 
+  // CART BOX
   cartIcon.onclick = () => {
     cartBox.classList.toggle("active");
     menu.style.display = "none";
@@ -70,6 +75,7 @@ if (window.innerWidth < 730) {
   };
 }
 
+// CART BOX
 navCart.onclick = () => {
   cartBox.classList.toggle("active");
   if (cartBox.classList.contains("active")) {
