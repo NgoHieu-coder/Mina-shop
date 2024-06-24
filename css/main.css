@@ -1,449 +1,480 @@
 /* reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    list-style: none;
-    border: none;
-    outline: none;
-    font-family: "Poppins", sans-serif;
-    scroll-behavior: smooth;
-    line-height: 1.5;
-    font-size: 18px;
-    object-fit: cover;
-    font-weight: 500;
-    cursor: pointer;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  border: none;
+  outline: none;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+  line-height: 1.5;
+  font-size: 18px;
+  object-fit: cover;
+  font-weight: 500;
+  cursor: pointer;
 }
 
 html {
-    overflow-x: hidden;
-    scroll-behavior: smooth;
-    scroll-padding-top: 6rem;
-    
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
 }
 
 body {
-    background-color: #fff;
-    overflow: hidden;
+  background-color: #fff;
+  overflow: hidden;
 }
 
 /* Css class common  */
 .flex-cen-h {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .flex-cen {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .content {
-    position:absolute; 
-    color: #fff;
-    
+  position: absolute;
+  color: #fff;
 }
 
 .content h1 {
-    font-size: 88px;
+  font-size: 88px;
 }
 
- .content p {
-    font-size: 20px;
-    font-weight: 300;
-    text-align: center;
+.content p {
+  font-size: 20px;
+  font-weight: 300;
+  text-align: center;
 }
 
 /* Begin: header */
 header {
-    position: fixed;
-    top: 0px; right: 0px; left: 0px ;
-    z-index: 10;
-    background-color: #fff;
-    display:flex;
-    justify-content:space-between;
-    align-items: center;
-    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%);
-    padding: 16px 8%;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  z-index: 10;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%);
+  padding: 16px 8%;
 }
 
 /* NAV  */
 nav li {
-    margin-left: 40px;
+  margin-left: 40px;
 }
 
 nav i {
-    margin: 0px 6px 0px 12px;
+  margin: 0px 6px 0px 12px;
 }
 
 nav a {
-    color: #000;
-    font-weight: 300;
-    line-height: 25.6px; 
-    font-size: 16px;
+  color: #000;
+  font-weight: 300;
+  line-height: 25.6px;
+  font-size: 16px;
 }
 
-nav .menu a:hover, nav .menu a:active{
-    border-bottom: 1.5px solid #000;
+nav .menu a:hover,
+nav .menu a:active {
+  border-bottom: 1.5px solid #000;
 }
 
 nav .menu .navCart a:hover {
-    border-bottom: none;
+  border-bottom: none;
 }
 
 nav .menu li {
-    display: inline-block;
-    position: relative;
-    padding: 10px 0;
+  display: inline-block;
+  position: relative;
+  padding: 10px 0;
 }
 
 #nameShop {
-    font-weight: 700;
-    font-size: 24px;
-    color:#000;
+  font-weight: 700;
+  font-size: 24px;
+  color: #000;
 }
 
-nav .menu .subnav{
-    display: none;
-    position: absolute;
-    top:40px;
-    border-radius: 4px;
-    background-color: #ffff;
-    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 5px 0 rgb(0 0 0 / 12%);
-    padding: 10px 0;
+nav .menu .subnav {
+  display: none;
+  position: absolute;
+  top: 40px;
+  border-radius: 4px;
+  background-color: #ffff;
+  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 5px 0 rgb(0 0 0 / 12%);
+  padding: 10px 0;
 }
 
 nav .menu .subnav li {
-    margin: 0;
-    padding:4px 16px;
-    min-width: 160px;
+  margin: 0;
+  padding: 4px 16px;
+  min-width: 160px;
 }
 
 nav .menu li:hover .subnav {
-    display: block;
+  display: block;
 }
 
-nav .menu li:hover .iconArrowDown{
-    transform: rotate(180deg);
-    transition: all .1s ease-in-out;
+nav .menu li:hover .iconArrowDown {
+  transform: rotate(180deg);
+  transition: all 0.1s ease-in-out;
 }
 
 header .icons {
-    display: none;
+  display: none;
 }
 
 .cartBox {
-    position: absolute;
-    top:0; 
-    right:0;
-    height: 100%;
-    padding: 0 24px;
-    width: 350px;
-    background: #fff;
-    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 5px 0 rgb(0 0 0 / 12%);
-    display: none;
-    z-index: 200;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  padding: 0 24px;
+  width: 350px;
+  background: #fff;
+  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 5px 0 rgb(0 0 0 / 12%);
+  display: none;
+  z-index: 200;
 }
 
 .cartBox.active {
-    display: flex;
-    justify-content: center; 
+  display: flex;
+  justify-content: center;
+  position: fixed;
 }
 
 .cartBox h5 {
-    margin-top: 150px;
-    font-size: 24px;
+  margin-top: 150px;
+  font-size: 24px;
 }
 
 .cartBox-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #27262653;
-    pointer-events:all;
-    z-index: 100; 
-    display: none;
-  }
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #27262653;
+  pointer-events: all;
+  z-index: 100;
+  display: none;
+}
 
-  .fa-xmark {
-    position: absolute;
-    right: 32px;
-    top:32px;
+.fa-xmark {
+  position: absolute;
+  right: 32px;
+  top: 32px;
 }
 /* End: header */
 
 .freeShipping {
-    position: relative;
-    margin-top:80px;
-    overflow: hidden;
-    height: 61px;
-    align-items: center;
-    background: rgb(76, 31, 89);
+  position: relative;
+  margin-top: 80px;
+  overflow: hidden;
+  height: 61px;
+  align-items: center;
+  background: rgb(76, 31, 89);
 }
 
 .freeShipping p {
-    color:#fff;
-    font-weight: 300;
-    font-size: 18px;
-    text-align: center;
+  color: #fff;
+  font-weight: 300;
+  font-size: 18px;
+  text-align: center;
 }
 
 /* Begin: landing */
-#homeDecor, #signUp,#home .sliderHome , #shopLanding, #newLanding {
-    position: relative;
-    z-index: 1;
-    min-height: 100vh;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#homeDecor,
+#signUp,
+#home .sliderHome,
+#shopLanding,
+#newLanding {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-#homeDecor::before, #signUp::before,#home .sliderHome::before,#shopLanding::before,#newLanding::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.2); 
-    z-index: -1; 
+#homeDecor::before,
+#signUp::before,
+#home .sliderHome::before,
+#shopLanding::before,
+#newLanding::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: -1;
 }
 
 /* BUTTON */
-.shopButton button,#signUp .shopButton button, #homeInfor .inforBox .learnButton button, #insta .instaButton button  {
-    border-radius: 8px;
-    font-weight: 300;
-    font-size: 16px;
-    position: relative;
-    overflow: hidden;
-    z-index: 0;
+.shopButton button,
+#signUp .shopButton button,
+#homeInfor .inforBox .learnButton button,
+#insta .instaButton button {
+  border-radius: 8px;
+  font-weight: 300;
+  font-size: 16px;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
 }
-.shopButton button::before, #signUp .shopButton button::before, #homeInfor .inforBox .learnButton button::before, #insta .instaButton button::before {
-    content:'';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 0;
-    height: 100%;
-    transition: .3s linear;
-    z-index: -1;
+.shopButton button::before,
+#signUp .shopButton button::before,
+#homeInfor .inforBox .learnButton button::before,
+#insta .instaButton button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 100%;
+  transition: 0.3s linear;
+  z-index: -1;
 }
-.shopButton button:hover::before,#signUp .shopButton button:hover::before {
-    width: 100%;
-    left: 0;
+.shopButton button:hover::before,
+#signUp .shopButton button:hover::before {
+  width: 100%;
+  left: 0;
 }
 
-.shopButton button:hover,#homeDecor .shopButton button:hover, #signUp .shopButton button:hover{
-    color: #fff;
+.shopButton button:hover,
+#homeDecor .shopButton button:hover,
+#signUp .shopButton button:hover {
+  color: #fff;
 }
 
 #home .sliderHome {
-    background: url(../img/home.png) center / cover no-repeat;
-    min-height: 85vh !important;
+  background: url(../img/home.png) center / cover no-repeat;
+  min-height: 85vh !important;
 }
 
 .shopButton button {
-    width: 163px;
-    height: 57px;
-    margin-top:30px;
-    color: rgb(76, 31, 89);
+  width: 163px;
+  height: 57px;
+  margin-top: 30px;
+  color: rgb(76, 31, 89);
 }
 
 .shopButton button::before {
-    background:rgba(76, 31, 89, 0.5);
+  background: rgba(76, 31, 89, 0.5);
 }
 /* End: landing */
 
 /* Begin: best sellers */
-#bestSellers, #insta{
-    padding: 80px 8%;
+#bestSellers,
+#insta {
+  padding: 80px 8%;
 }
 
-#bestSellers h3, #insta h3 {
-    color: #000;
-    font-size: 48px;
-    text-align: center;
+#bestSellers h3,
+#insta h3 {
+  color: #000;
+  font-size: 48px;
+  text-align: center;
 }
 
 #bestSellers .productsBest {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 80px;
-    gap:24px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 80px;
+  gap: 24px;
 }
 #bestSellers .productsBest .productBox {
-    position: relative;
-    overflow: hidden;
-    text-align: center;
-    flex: 1 1 24px;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  flex: 1 1 24px;
 }
 
 #bestSellers .productsBest .productBox img {
-    width: 288px;
-    transition: all .3s ease-in-out;
+  width: 288px;
+  transition: all 0.3s ease-in-out;
 }
 
-#bestSellers .productsBest .productBox:hover img, #shopProducts .shopProductBox:hover img {
-    filter: brightness(80%);
+#bestSellers .productsBest .productBox:hover img,
+#shopProducts .shopProductBox:hover img {
+  filter: brightness(80%);
 }
 
 .sale {
-    position: absolute;
-    margin: 8px 0;
-    z-index: 1;
-    padding: 6px 12px;
-    color: #fff;
-    background-color: rgb(111, 23, 135);
-    font-weight: 300;
+  position: absolute;
+  margin: 8px 0;
+  z-index: 1;
+  padding: 6px 12px;
+  color: #fff;
+  background-color: rgb(111, 23, 135);
+  font-weight: 300;
 }
 
-#bestSellers .productsBest .productBox h3,#shopProducts .allProducts .shopProductBox h3 {
-    margin: 12px 0 8px 0;
-    font-size: 24px;
-    font-weight: 400;
+#bestSellers .productsBest .productBox h3,
+#shopProducts .allProducts .shopProductBox h3 {
+  margin: 12px 0 8px 0;
+  font-size: 24px;
+  font-weight: 400;
 }
 
-#bestSellers .productsBest .productBox p, #shopProducts .allProducts .shopProductBox p {
-    font-weight: 300;
+#bestSellers .productsBest .productBox p,
+#shopProducts .allProducts .shopProductBox p {
+  font-weight: 300;
 }
 
-#bestSellers .productsBest .productBox p span, #shopProducts .allProducts .shopProductBox p span{
-    text-decoration: line-through;
-    opacity: .4;
-    margin-right:8px;
-    font-weight: 300;
+#bestSellers .productsBest .productBox p span,
+#shopProducts .allProducts .shopProductBox p span {
+  text-decoration: line-through;
+  opacity: 0.4;
+  margin-right: 8px;
+  font-weight: 300;
 }
 /* End: best sellers */
 
 /* Begin: home decor */
 
-#homeDecor, #signUp {
-    position: relative;
-    z-index: 1;
-    min-height: 80vh;
+#homeDecor,
+#signUp {
+  position: relative;
+  z-index: 1;
+  min-height: 80vh;
 }
 
 #homeDecor {
-    background: url(../img/homeDecor.webp) center / cover no-repeat;
+  background: url(../img/homeDecor.webp) center / cover no-repeat;
 }
 
-#homeDecor::before, #signUp::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.2); 
-    z-index: -1; 
+#homeDecor::before,
+#signUp::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: -1;
 }
 
 #homeDecor .shopButton button::before {
-    background:rgba(44, 129, 166, 0.9);
+  background: rgba(44, 129, 166, 0.9);
 }
 
 #homeDecor .shopButton button {
-    color:rgb(13, 59, 79);
+  color: rgb(13, 59, 79);
 }
 
 /* End: home decor */
 
 /* Begin: infor home  */
 #homeInfor {
-    padding: 120px 8%;
+  padding: 120px 8%;
 }
 
-#homeInfor container{
-    display: grid;
-    grid-template-columns: auto auto;
-    gap:12px;
+#homeInfor container {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 12px;
 }
-#homeInfor .inforBox{
-    position: relative;
-    overflow: hidden;
-    text-align: left;
+#homeInfor .inforBox {
+  position: relative;
+  overflow: hidden;
+  text-align: left;
 }
 
 #homeInfor .inforBox img {
-    width: 606px;
-    height: 384px;
+  width: 606px;
+  height: 384px;
 }
 
 #homeInfor .inforBox h3 {
-    font-size: 32px;
-    margin: 25px 0 15px 0;
+  font-size: 32px;
+  margin: 25px 0 15px 0;
 }
 
 #homeInfor .inforBox p {
-    color:rgb(93, 87, 94);
-    font-weight: 300;
+  color: rgb(93, 87, 94);
+  font-weight: 300;
 }
 
 #homeInfor .inforBox .learnButton button {
-    padding:16px 42px;
+  padding: 16px 42px;
 }
 
-#homeInfor .inforBox .learnButton button, #insta .instaButton button  {
-    background-color: rgb(76, 31, 89);
-    border:2px solid rgb(76, 31, 89);
-    color:#fff;
-    margin-top:35px;
+#homeInfor .inforBox .learnButton button,
+#insta .instaButton button {
+  background-color: rgb(76, 31, 89);
+  border: 2px solid rgb(76, 31, 89);
+  color: #fff;
+  margin-top: 35px;
 }
-#homeInfor .inforBox .learnButton button::before, #insta .instaButton button::before  {
-    background:#fff;
-    border-radius: 8px;
+#homeInfor .inforBox .learnButton button::before,
+#insta .instaButton button::before {
+  background: #fff;
+  border-radius: 8px;
 }
-#homeInfor .inforBox .learnButton button:hover::before, #insta .instaButton button:hover::before {
-    width: 100%;
-    left: 0;
-    border:2px solid #fff;
-    border-radius: 8px;
+#homeInfor .inforBox .learnButton button:hover::before,
+#insta .instaButton button:hover::before {
+  width: 100%;
+  left: 0;
+  border: 2px solid #fff;
+  border-radius: 8px;
 }
 
-#homeInfor .inforBox .learnButton button:hover, #insta .instaButton button:hover{
-    color: rgb(76, 31, 89);
-    border-radius: 8px;
-    border:2px solid rgb(76, 31, 89);
+#homeInfor .inforBox .learnButton button:hover,
+#insta .instaButton button:hover {
+  color: rgb(76, 31, 89);
+  border-radius: 8px;
+  border: 2px solid rgb(76, 31, 89);
 }
 /* End: infor home  */
 
 /* Begin: sign up */
 
 #signUp {
-    background: url(../img/signUp.png) center / cover no-repeat;
+  background: url(../img/signUp.png) center / cover no-repeat;
 }
 
 #signUp h1 {
-    font-size: 64px;
-    margin-bottom: 45px;
-    padding-bottom: 55px;
+  font-size: 64px;
+  margin-bottom: 45px;
+  padding-bottom: 55px;
 }
 
 #signUp input {
-    padding: 13px 0px 13px 15px;
-    width: 45%;
-    font-size: 14px;
-    font-weight: 300;
-    position:absolute;
-    top:50%;
-    border-radius: 4px;
+  padding: 13px 0px 13px 15px;
+  width: 45%;
+  font-size: 14px;
+  font-weight: 300;
+  position: absolute;
+  top: 50%;
+  border-radius: 4px;
 }
 
 #signUp .shopButton button {
-    height: 52px; 
-    width: 136px;
-    margin-top:5px;
-    color: rgb(31, 89, 49);
+  height: 52px;
+  width: 136px;
+  margin-top: 5px;
+  color: rgb(31, 89, 49);
 }
 
 #signUp .shopButton button::before {
-    background:rgba(31, 89, 49, 0.8);
+  background: rgba(31, 89, 49, 0.8);
 }
 
 /* End: sign up */
@@ -451,398 +482,403 @@ header .icons {
 /* Begin: insta */
 
 #insta .imgBox img {
-    width: 400px;
+  width: 400px;
 }
 
 #insta .instaButton button {
-    padding:12px 37px;
+  padding: 12px 37px;
 }
 
-#insta container{ 
-    display: grid;
-    grid-template-columns: auto auto auto;
-    gap: 12px;
+#insta container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 12px;
 }
 
 #insta .imgBox {
-    display: flex;
-    overflow: hidden;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
 }
 
 /* End: insta */
 
 footer {
-    background-color: rgb(241, 241, 241);
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 65px 8% 40px 8%;
+  background-color: rgb(241, 241, 241);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 65px 8% 40px 8%;
 }
 
 footer .socialFlatform {
-    display:flex;
-    justify-content: space-between;
-    width: 138px;
-    margin: 14px 0 -2px 0;
+  display: flex;
+  justify-content: space-between;
+  width: 138px;
+  margin: 14px 0 -2px 0;
 }
 
 footer .socialFlatform i {
-    font-size: 25px;
+  font-size: 25px;
 }
 footer .link {
-    margin-right: 110px;
+  margin-right: 110px;
 }
 footer .link li {
-    margin-top:12px;
+  margin-top: 12px;
 }
 
 footer .link a {
-    color: #000;
-    text-decoration: underline;
-    font-weight: 300;
+  color: #000;
+  text-decoration: underline;
+  font-weight: 300;
 }
 
 /* RESPONSIVE */
 @media (max-width: 991px) {
-    #homeDecor, #signUp {
-        min-height: 60vh;
-    } 
-    header {
-        padding: 16px 32px;
-    }
-    nav li {
-        margin-left: 20px;
-    }
-    
-    nav i {
-        margin: 3px;
-    }
+  #homeDecor,
+  #signUp {
+    min-height: 60vh;
+  }
+  header {
+    padding: 16px 32px;
+  }
+  nav li {
+    margin-left: 20px;
+  }
 
-    .content h1 {
-        display: flex;
-        justify-content: center;
-        text-align: center;
-        font-size: 80px;
-        line-height: 75px;
-       
-    }
+  nav i {
+    margin: 3px;
+  }
 
-    .shopButton button, #signUp .shopButton button  {
-        width: 140px;
-        height: 50px;
-        margin-top: 10px;
-        border-radius: 5px;
-    }
+  .content h1 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 80px;
+    line-height: 75px;
+  }
 
+  .shopButton button,
+  #signUp .shopButton button {
+    width: 140px;
+    height: 50px;
+    margin-top: 10px;
+    border-radius: 5px;
+  }
 
-    #signUp h1 {
-        font-size: 55px;
-        margin-bottom: 50px;
-        padding-bottom: 45px;
-    }
+  #signUp h1 {
+    font-size: 55px;
+    margin-bottom: 50px;
+    padding-bottom: 45px;
+  }
 
-    #signUp input {
-        top: 45%;
-    }
+  #signUp input {
+    top: 45%;
+  }
 
-    
-    #homeInfor container {
-        display: grid;
-        grid-template-columns: auto;
-        gap: 40px;
+  #homeInfor container {
+    display: grid;
+    grid-template-columns: auto;
+    gap: 40px;
+  }
 
-    }
+  #homeInfor .inforBox .learnButton button {
+    margin-top: 15px;
+  }
 
-    #homeInfor .inforBox .learnButton button {
-        margin-top: 15px;
-    }
+  #homeInfor .inforBox h3 {
+    font-size: 32px;
+    margin: 15px 0 5px 0;
+  }
 
-    #homeInfor .inforBox h3 {
-        font-size: 32px;
-        margin: 15px 0 5px 0;
-    }
+  #bestSellers .productsBest {
+    display: grid;
+    grid-template-columns: auto auto;
+    margin-top: 80px;
+    gap: 24px;
+  }
 
-    #bestSellers .productsBest {
-        display: grid;
-        grid-template-columns: auto auto;
-        margin-top: 80px;
-        gap: 24px;
-    }
+  #bestSellers,
+  #insta {
+    padding: 80px 4%;
+  }
 
-
-    #bestSellers, #insta {
-        padding: 80px 4%;
-    }
-
-    #insta .imgBox img {
-        width: 300px;
-    }
-
+  #insta .imgBox img {
+    width: 300px;
+  }
 }
 
 @media (max-width: 730px) {
+  .content {
+    margin: 0 50px;
+  }
+  .content h1 {
+    font-size: 65px;
+    line-height: 65px;
+  }
 
-    .content {
-        margin: 0 50px;
-    }
-    .content h1 {
-        font-size: 65px;
-        line-height: 65px;
-    }
+  #nameShop {
+    font-size: 26px;
+  }
 
-    #nameShop {
-        font-size: 26px;
-    }
+  .icons {
+    display: flex !important;
+    align-items: center;
+    gap: 10px;
+  }
 
-    .icons {
-        display: flex !important;
-        align-items: center;
-        gap: 10px;
-    }
+  .nav__toggle,
+  .nav__shop {
+    position: relative;
+    width: 32px;
+    height: 32px;
+  }
 
-    .nav__toggle, .nav__shop {
-        position: relative;
-        width: 32px;
-        height: 32px;
-    }
-      
-    .nav__burger, 
-    .nav__close , .fa-bag-shopping{
-        position: absolute;
-        width: max-content;
-        height: max-content;
-        inset: 0;
-        margin: auto;
-        font-size: 20px;
-        cursor: pointer;
-        transition: opacity .1s, transform .4s;
-    }
-      
-    
-    .navMenu {
-        position: absolute;
-        left: 0;
-        top: 70px;
-        width: 100%;
-        height: 100%;
-        
-    }
+  .nav__burger,
+  .nav__close,
+  .fa-bag-shopping {
+    position: absolute;
+    width: max-content;
+    height: max-content;
+    inset: 0;
+    margin: auto;
+    font-size: 20px;
+    cursor: pointer;
+    transition: opacity 0.1s, transform 0.4s;
+  }
 
-    .navMenu::-webkit-scrollbar {
-        width: 0;
-    }
+  .navMenu {
+    position: absolute;
+    left: 0;
+    top: 70px;
+    width: 100%;
+    height: 100%;
+  }
 
-    .menu {
-        display: none;
-        background-color: white;
-        padding: 16px 0;
-        border-top: .1rem solid  rgba(0, 0, 0, .1);
-        box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 5px 0 rgb(0 0 0 / 12%);
-        
-    }
+  .navMenu::-webkit-scrollbar {
+    width: 0;
+  }
 
-    nav .menu .dropdownItem {
-        display: grid !important;
-        grid-template-rows:  auto auto !important;
-        grid-template-columns: 100%;
-        justify-content: space-between;
-        margin: 0px !important;
-        padding: 0px;
-    }
+  .menu {
+    display: none;
+    background-color: white;
+    padding: 16px 0;
+    border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 5px 0 rgb(0 0 0 / 12%);
+  }
 
-    nav .menu li{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
+  nav .menu .dropdownItem {
+    display: grid !important;
+    grid-template-rows: auto auto !important;
+    grid-template-columns: 100%;
+    justify-content: space-between;
+    margin: 0px !important;
+    padding: 0px;
+  }
 
-    nav .menu a {
-        padding:4px 40px 4px 6px;
-        border-left: 3px solid transparent ;
-        width: 100%;
-    }
+  nav .menu li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-    nav .menu a:active, nav .menu a:hover{
-      border-left: 3px solid rgb(111, 23, 135);
-      border-bottom: none;
-    }
+  nav .menu a {
+    padding: 4px 40px 4px 6px;
+    border-left: 3px solid transparent;
+    width: 100%;
+  }
 
-   .dropdownLink {
+  nav .menu a:active,
+  nav .menu a:hover {
+    border-left: 3px solid rgb(111, 23, 135);
+    border-bottom: none;
+  }
+
+  .dropdownLink {
     padding: 4px 0 4px 6px !important;
-   }
+  }
 
-    .dropdownItem div {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding:12px 40px 12px 20px;
-    }
+  .dropdownItem div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 40px 12px 20px;
+  }
 
-    .subnav {
-        max-height: 0px;
-        overflow: hidden;
-        transition: max-height .2s ease-out;
-    }
+  .subnav {
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+  }
 
+  .navCart {
+    display: none !important;
+  }
 
-    .navCart {
-        display: none !important;
-    }
+  .show-menu {
+    opacity: 1;
+    top: 65px;
+    pointer-events: initial;
+  }
 
-    .show-menu {
-        opacity: 1;
-        top: 65px;
-        pointer-events: initial;
-    }
-  
-    .show-icon .nav__burger {
-        opacity: 0;
-        transform: rotate(90deg);
-    }
-    .show-icon .nav__close {
-        opacity: 1;
-        transform: rotate(90deg);
-    }
+  .show-icon .nav__burger {
+    opacity: 0;
+    transform: rotate(90deg);
+  }
+  .show-icon .nav__close {
+    opacity: 1;
+    transform: rotate(90deg);
+  }
 
-    nav .menu .subnav {
-        display: flex !important;
-        flex-direction: column;
-        box-shadow: none;
-        position:unset;
-        padding: 0px 40px;
-    }
+  nav .menu .subnav {
+    display: flex !important;
+    flex-direction: column;
+    box-shadow: none;
+    position: unset;
+    padding: 0px 40px;
+  }
 
-    nav .menu .subnav li {
-        padding: 4px 40px 4px 12px;
-    }
-  
-    .freeShipping {
-        margin-top: 70px;
-    }
+  nav .menu .subnav li {
+    padding: 4px 40px 4px 12px;
+  }
 
-    
-    .shopButton button, #signUp .shopButton button{
-        font-size: 16px;
-    }
+  .freeShipping {
+    margin-top: 70px;
+  }
 
-    #signUp h1 {
-        font-size: 50px;
-        margin-bottom: 60px;
-        padding-bottom: 20px;
-        line-height: 55px;
-    }
+  .shopButton button,
+  #signUp .shopButton button {
+    font-size: 16px;
+  }
 
-    #signUp input {
-        top: 55%;
-        padding: 10px 0px 10px 15px;
-        width: 300px;
+  #signUp h1 {
+    font-size: 50px;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    line-height: 55px;
+  }
 
-    }
+  #signUp input {
+    top: 55%;
+    padding: 10px 0px 10px 15px;
+    width: 300px;
+  }
 
-    #bestSellers .productsBest {
-        grid-template-columns: auto;
-        margin-top: 80px;
-        gap: 24px;
-        margin-top: 50px;
-    }
+  #bestSellers .productsBest {
+    grid-template-columns: auto;
+    margin-top: 80px;
+    gap: 24px;
+    margin-top: 50px;
+  }
 
-    #insta container{
-        grid-template-columns: auto;
-    }
+  #insta container {
+    grid-template-columns: auto;
+  }
 
-    #insta .imgBox img {
-        width: 70%;
-    }
+  #insta .imgBox img {
+    width: 70%;
+  }
 
-    #bestSellers .productsBest {
-        grid-template-columns: auto auto;
-    }
+  #bestSellers .productsBest {
+    grid-template-columns: auto auto;
+  }
 
-    footer {
-        flex-direction: column;
-        gap:32px;
-        align-items: flex-start;
-    }
-    
-    
+  footer {
+    flex-direction: column;
+    gap: 32px;
+    align-items: flex-start;
+  }
 }
 
 @media (max-width: 555px) {
+  .content {
+    margin: 0;
+  }
 
-    .content {
-        margin: 0;
-    }
-    
-    .shopButton button, #signUp .shopButton button{
-        width: 120px;
-        font-size: 12px;
-    }
+  .shopButton button,
+  #signUp .shopButton button {
+    width: 120px;
+    font-size: 12px;
+  }
 
-    #homeInfor .inforBox .learnButton button {
-        padding: 10px 30px;
-        border-radius: 5px;
-    }
+  #homeInfor .inforBox .learnButton button {
+    padding: 10px 30px;
+    border-radius: 5px;
+  }
 
-    #bestSellers h3, #insta h3 {
-        font-size: 45px;
-    }
+  #bestSellers h3,
+  #insta h3 {
+    font-size: 45px;
+  }
 
-    #signUp .shopButton button,.shopButton button {
-        height: 40px; 
-        width: 100px;
-    }
+  #signUp .shopButton button,
+  .shopButton button {
+    height: 40px;
+    width: 100px;
+  }
 
-    #homeInfor .inforBox img {
-        width: 450px;
-        height: 300px;
-    }
+  #homeInfor .inforBox img {
+    width: 450px;
+    height: 300px;
+  }
 
-    #bestSellers .productsBest {
-        grid-template-columns: auto;
-    }
+  #bestSellers .productsBest {
+    grid-template-columns: auto;
+  }
 
-    .freeShipping {
-        height: 80px;
-        padding: 0 30px;
-    }
+  .freeShipping {
+    height: 80px;
+  }
 
-    #home .sliderHome {
-        min-height: 70vh !important;
-    }
-
-
+  #home .sliderHome {
+    min-height: 70vh !important;
+  }
 }
 
 @media (max-width: 430px) {
-    .content h1 {
-        font-size: 55px;
-        line-height: 60px;
-    }
+  .content h1 {
+    font-size: 55px;
+    line-height: 60px;
+  }
 
-    .freeShipping p {
-        margin:0 30px;
-    }
+  .freeShipping p {
+    margin: 0 20px;
+    font-size: 16px;
+  }
 
-    .content p {
-        font-size: 18px;
-    }
+  .content p {
+    font-size: 18px;
+  }
 
-    #signUp h1 {
-        font-size: 45px;
-        margin-bottom: 35px;
-        padding-bottom: 30px;
-    }
+  #signUp h1 {
+    font-size: 45px;
+    margin-bottom: 35px;
+    padding-bottom: 30px;
+  }
 
-    #signUp input {
-        padding: 8px 0px 8px 15px;
-        width: 250px;
+  #signUp input {
+    padding: 8px 0px 8px 15px;
+    width: 250px;
+  }
 
-    }
+  .cartBox.active {
+    width: 100%;
+  }
+}
 
-    .cartBox.active {
-        width: 100%;
-        
-    }
+@media (max-width: 350px) {
+  .content h1 {
+    font-size: 45px;
+    line-height: 50px;
+  }
+
+  #signUp h1 {
+    font-size: 40px;
+  }
+
+  .cartBox h5 {
+    font-size: 20px;
+  }
 }
