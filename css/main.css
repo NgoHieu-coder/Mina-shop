@@ -13,7 +13,6 @@
   font-size: 18px;
   object-fit: cover;
   font-weight: 500;
-  cursor: pointer;
 }
 
 html {
@@ -84,6 +83,7 @@ header {
 /* NAV  */
 nav li {
   margin-left: 40px;
+  cursor: pointer;
 }
 
 nav i {
@@ -100,10 +100,12 @@ nav a {
 nav .menu a:hover,
 nav .menu a:active {
   border-bottom: 1.5px solid #000;
+  cursor: pointer;
 }
 
 nav .menu .navCart a:hover {
   border-bottom: none;
+  cursor: pointer;
 }
 
 nav .menu li {
@@ -136,11 +138,13 @@ nav .menu .subnav li {
 
 nav .menu li:hover .subnav {
   display: block;
+  cursor: pointer;
 }
 
 nav .menu li:hover .iconArrowDown {
   transform: rotate(180deg);
   transition: all 0.1s ease-in-out;
+  cursor: pointer;
 }
 
 header .icons {
@@ -158,6 +162,7 @@ header .icons {
   box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 5px 0 rgb(0 0 0 / 12%);
   display: none;
   z-index: 200;
+  cursor: pointer;
 }
 
 .cartBox.active {
@@ -266,16 +271,18 @@ header .icons {
 #signUp .shopButton button:hover::before {
   width: 100%;
   left: 0;
+  cursor: pointer;
 }
 
 .shopButton button:hover,
 #homeDecor .shopButton button:hover,
 #signUp .shopButton button:hover {
   color: #fff;
+  cursor: pointer;
 }
 
 #home .sliderHome {
-  background: url(../img/home.png) center / cover no-repeat;
+  background: url(../img/Home/home.png) center / cover no-repeat;
   min-height: 85vh !important;
 }
 
@@ -315,6 +322,7 @@ header .icons {
   overflow: hidden;
   text-align: center;
   flex: 1 1 24px;
+  cursor: pointer;
 }
 
 #bestSellers .productsBest .productBox img {
@@ -368,7 +376,7 @@ header .icons {
 }
 
 #homeDecor {
-  background: url(../img/homeDecor.webp) center / cover no-repeat;
+  background: url(../img/Home/homeDecor.webp) center / cover no-repeat;
 }
 
 #homeDecor::before,
@@ -407,6 +415,7 @@ header .icons {
   position: relative;
   overflow: hidden;
   text-align: left;
+  cursor: pointer;
 }
 
 #homeInfor .inforBox img {
@@ -453,13 +462,14 @@ header .icons {
   color: rgb(76, 31, 89);
   border-radius: 8px;
   border: 2px solid rgb(76, 31, 89);
+  cursor: pointer;
 }
 /* End: infor home  */
 
 /* Begin: sign up */
 
 #signUp {
-  background: url(../img/signUp.png) center / cover no-repeat;
+  background: url(../img/Home/signUp.png) center / cover no-repeat;
 }
 
 #signUp h1 {
@@ -499,6 +509,7 @@ header .icons {
 
 #insta .instaButton button {
   padding: 12px 37px;
+  cursor: pointer;
 }
 
 #insta container {
@@ -533,12 +544,14 @@ footer .socialFlatform {
 
 footer .socialFlatform i {
   font-size: 25px;
+  cursor: pointer;
 }
 footer .link {
   margin-right: 110px;
 }
 footer .link li {
   margin-top: 12px;
+  cursor: pointer;
 }
 
 footer .link a {
@@ -548,7 +561,25 @@ footer .link a {
 }
 
 /* RESPONSIVE */
-@media (max-width: 991px) {
+@media (min-width: 1500px) {
+  #bestSellers,
+  #insta {
+    padding: 80px 18%;
+  }
+
+  #homeInfor {
+    padding: 120px 18%;
+  }
+  #homeDecor,
+  #signUp {
+    min-height: 100vh;
+  }
+  #shopProducts {
+    padding: 100px 18% !important;
+  }
+}
+
+@media (max-width: 1100px) {
   #homeDecor,
   #signUp {
     min-height: 60vh;
@@ -609,12 +640,12 @@ footer .link a {
     display: grid;
     grid-template-columns: auto auto;
     margin-top: 80px;
-    gap: 24px;
+    gap: 40px 24px;
   }
 
   #bestSellers,
   #insta {
-    padding: 80px 4%;
+    padding: 80px 18%;
   }
 
   #insta .imgBox img {
@@ -622,7 +653,12 @@ footer .link a {
   }
 }
 
-@media (max-width: 730px) {
+@media (max-width: 750px) {
+  #bestSellers,
+  #insta {
+    padding: 80px 8%;
+  }
+
   .content {
     margin: 0 50px;
   }
@@ -877,6 +913,14 @@ footer .link a {
 
   .cartBox.active {
     width: 100%;
+  }
+  #homeInfor {
+    padding: 120px 4%;
+  }
+
+  #homeInfor .inforBox img {
+    width: 400px;
+    height: 300px;
   }
 }
 

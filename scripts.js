@@ -102,7 +102,7 @@ function reveal() {
   for (var i = 0; i < reveals.length; i++) {
     var windowHeight = window.innerHeight;
     var revealTop = reveals[i].getBoundingClientRect().top;
-    var revealPoint = 10;
+    var revealPoint = 20;
 
     if (revealTop < windowHeight - revealPoint) {
       reveals[i].classList.add("active");

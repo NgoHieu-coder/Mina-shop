@@ -1,10 +1,11 @@
 #shopLanding {
-  background: url(../img/landingshop.avif) center / cover no-repeat;
+  background: url(../img/Shop/landingshop.avif) center / cover no-repeat;
   min-height: 45vh;
 }
 
 #newLanding {
-  background: url(../img/landingNewCollection.webp) center / cover no-repeat;
+  background: url(../img/Shop/landingNewCollection.webp) center / cover
+    no-repeat;
   min-height: 50vh;
 }
 
@@ -16,7 +17,7 @@
   display: grid;
   grid-template-columns: auto auto auto;
   text-align: center;
-  gap: 32px 24px;
+  gap: 40px 24px;
 }
 
 #shopProducts .allProducts .shopProductBox {
@@ -30,10 +31,19 @@
 }
 
 /* RESPONSIVE */
+@media (max-width: 1050px) {
+  #shopProducts .allProducts .shopProductBox img {
+    width: 300px;
+  }
+}
 @media (max-width: 991px) {
   #shopProducts .allProducts {
     grid-template-columns: auto auto;
     gap: 24px;
+  }
+
+  #shopProducts {
+    padding: 100px 14%;
   }
 }
 
