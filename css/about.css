@@ -1,0 +1,210 @@
+/*---------Start 1--------*/
+.Title {
+    position: relative;
+    text-align: center;
+  }
+  
+  .Title-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    font-size: 88px;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+  }
+  
+  .Background img {
+    width: 100%;
+    filter: brightness(80%);
+  }
+  /*--------END 1---------*/
+  
+  
+  
+  /*--------Start 2--------*/
+  .Introduce {
+    display: grid;
+    grid-template-columns: auto;
+    justify-items: center;  
+    align-items: center;    
+  }
+  
+  .Introduce p {  
+    width: 606px;
+    height: 89.25px;
+    font-size: 24px;
+    font-weight: 500;
+    color: rgb(25, 25, 25);
+    text-align: center;
+    margin: 120px 0;
+  }
+  
+  /*-----------END 2-----------*/
+  
+  
+  /*-----------Start 3---------*/
+  .Container-page{ 
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto auto;
+  }
+  
+  .AL-picture{
+    grid-row: 1;
+    grid-column: 1;
+  }
+  .AL-picture img{
+    width: 598px;
+    height: 816.200px;
+    float: right;
+  }
+  .Container-AL{
+    grid-row: 1;
+    grid-column: 2;
+    margin: 200px 0 0 100px;  
+  }
+  .Container-AL h3{
+    font-size: 48px;
+    margin-bottom: 20px ;
+  }
+  .AL-content {
+    font-size: 18px;
+    font-weight: 400;
+    color: rgb(93, 87, 94);
+    width: 391.1px;
+    height: 259.2px;
+  }
+  /*...............................*/
+  .Container-S{
+    grid-column: 1;
+    grid-row: 2;
+    margin-top: 200px;
+    width: 458px;
+    height: 201.6px;
+    float: right;
+  }
+  .Container-S h3{
+    font-size: 48px;
+  }
+  .S-content{
+    font-size: 18px;
+    font-weight: 400;
+    color: rgb(93, 87, 94);
+  }
+  .S-picture{
+    grid-row: 2;
+    grid-column: 2;
+  }
+  .S-picture img{
+    width: 606px;
+    height: 544.062px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+  .button a{
+    color: aliceblue;
+}
+.button {  
+    grid-column: 1;
+    font-size: 15px;
+    padding: 15px 45px;
+    background-color: rgb(76, 31, 89);
+    width: 194px;
+    height: 57px;
+    border-radius: 10px;
+    -webkit-transition-duration: 0.4s;
+     transition-duration: 0.4s;
+     margin-top: 50px;
+}
+.button:hover {  
+    background-color: rgb(0, 0, 0); 
+}
+  /*-------------END 3--------------*/
+  
+  
+  @media (max-width: 1195px){
+    .AL-picture img{
+      width: 100%;
+      height: auto;
+    }
+    .AL-content{
+      width: 80%;
+      height: auto;
+    }
+    .S-picture img{
+      width: 100%;
+      height: auto;
+    }
+    .Container-S{
+      width: 100%;
+      height: auto;
+    }
+  }
+  
+  @media (max-width: 920px){
+    .Title-content {
+      font-size: 50px;
+    }
+    .Introduce p{
+      width: 328px;
+      height: 148.75px;
+    }
+    .Container-page{
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto auto auto;
+      justify-items: center;  
+      align-items: center;  
+    }
+    .AL-picture{
+      grid-column: 1;
+      grid-row: 1;
+    }
+    .AL-picture img{
+      width: 328px;
+      height: 313px;
+      float: none;
+    }
+    .Container-AL{
+      grid-column: 1;
+      grid-row: 2;
+      margin: 50px 0;  
+    }
+    .Container-AL h3{
+      font-size: 36px;
+      margin-bottom: 10px ;
+    }
+    .AL-content {
+      width: 328px;
+      height: 313px;
+    }
+    /*...............................*/
+    .Container-S{
+      width: 328px;
+      height: 313px;
+      grid-column: 1;
+      grid-row: 4;
+      margin: 50px 0;
+    }
+    .Container-S h3{
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+    .S-picture{
+      grid-column: 1;
+      grid-row: 3;
+    }
+    .S-picture img{
+      width: 328px;
+      height: 313px;
+      margin: 0;
+    }
+  }
+
+  @media (max-width: 555px){
+    .Title-content {
+      font-size: 35px;
+      line-height: 35px;
+    }
+  }

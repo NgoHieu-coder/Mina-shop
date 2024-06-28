@@ -113,3 +113,73 @@ function reveal() {
 }
 
 window.addEventListener("scroll", reveal);
+
+
+//FORM REGISTER - Page Contact
+const usernameEle = document.getElementById('username');
+const emailEle = document.getElementById('email');
+const messageEle = document.getElementById('message');
+
+const SubmitContact = document.getElementById('Submit-contact');
+const inputEles = document.querySelectorAll('.Input');
+
+SubmitContact.addEventListener('click', function () {
+    Array.from(inputEles).map((ele) =>
+        ele.classList.remove('success', 'error')
+    );
+    let isValid = checkValidate();
+
+    if (isValid) {
+        alert('Successfully');
+    }
+});
+
+function checkValidate() {
+    let usernameValue = usernameEle.value;
+    let emailValue = emailEle.value;
+    let messageValue = messageEle.value;
+
+    let isCheck = true;
+
+    if (usernameValue == '') {
+        setError(usernameEle, 'This field is required');
+        isCheck = false;
+    } else {
+        setSuccess(usernameEle);
+    }
+
+    if (emailValue == '') {
+        setError(emailEle, 'This field is required');
+        isCheck = false;
+    } else if (!isEmail(emailValue)) {
+        setError(emailEle, 'Please enter a valid email address');
+        isCheck = false;
+    } else {
+        setSuccess(emailEle);
+    }
+
+    if (messageValue == '') {
+        setError(messageEle, 'This field is required');
+        isCheck = false;
+    } else {
+        setSuccess(messageEle);
+    }
+
+    return isCheck;
+}
+
+function setSuccess(ele) {
+    ele.parentNode.classList.add('success');
+}
+
+function setError(ele, message) {
+    let parentEle = ele.parentNode;
+    parentEle.classList.add('error');
+    parentEle.querySelector('small').innerText = message;
+}
+
+function isEmail(email) {
+    return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
+        email
+    );
+}
