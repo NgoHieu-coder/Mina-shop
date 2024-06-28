@@ -1,100 +1,93 @@
 /*----------START-----------*/
 .Title {
-    position: relative;
-    text-align: center;
-  }
-  
-  .Title-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
-    font-size: 88px;
-    font-weight: 500;
-    color: rgb(255, 255, 255);
-  }
-  
-  .Background img {
-    width: 100%;
-    filter: brightness(80%);
-  }
-  /*------------END------------*/
+  position: relative;
+  text-align: center;
+}
 
+.Title-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  font-size: 88px;
+  font-weight: 500;
+  color: rgb(255, 255, 255);
+}
 
-  /*------------START---------------*/
-  .Container-page{
-    display: grid;
-    grid-template-columns: 15% 30% 5% 40% 10%;
-    padding: 100px 0;
-  }
+.Background img {
+  width: 100%;
+  filter: brightness(80%);
+}
+/*------------END------------*/
 
-  /*-----------------------------------*/
-  .Container-InF{
-    width: 100%;
-    grid-column: 2;
-  }
+/*------------START---------------*/
+.Container-page {
+  display: grid;
+  grid-template-columns: 15% 30% 5% 40% 10%;
+  padding: 100px 0;
+}
 
-  .Address{
-    margin-bottom: 50px;
-  } 
-  .Address h3{
-    font-size: 32px;
-    font-weight: 500;
-    color: rgb(26, 26, 26);
-    margin-bottom: 15px;
-  }
-  .A-content {
-    font-size: 18px;
-    font-weight: 500;
-    color: #5D575E;
-  }
-
-/*----------------------------------*/
-.Container-Id{
+/*-----------------------------------*/
+.Container-InF {
+  width: 100%;
   grid-column: 2;
 }
-.Id h3{
+
+.Address {
+  margin-bottom: 50px;
+}
+.Address h3 {
   font-size: 32px;
   font-weight: 500;
   color: rgb(26, 26, 26);
-  margin-bottom: 15px;
+  margin-bottom: 35px;
+}
+.A-content {
+  font-size: 18px;
+  font-weight: 400;
+  color: #5d575e;
+}
+
+/*----------------------------------*/
+.Container-Id {
+  grid-column: 2;
+}
+.Id h3 {
+  font-size: 32px;
+  font-weight: 500;
+  color: rgb(26, 26, 26);
+  margin-bottom: 35px;
 }
 .I-content {
   font-size: 18px;
-  font-weight: 500;
-  color: #5D575E;
+  font-weight: 400;
+  color: #5d575e;
 }
 
 /*--------------------------------*/
-.Register{
+.Register {
   grid-column: 4;
 }
 .Input {
   margin-bottom: 40px;
-
 }
 .Input input {
-  /* width: 574px;
-  height: 16px;
-  border: 8px solid #dfdedea3;
-  height: 40px;
-  line-height: 100px;
-  padding: 10px;
-  outline: none;
-  transition: all 0.3s ease-out; */
-    padding: 13px 0px 13px 15px;
-    width: 100%;
-    font-size: 16px;
-    font-weight: 300;
-    border-radius: 4px;
-    background-color: rgb(241, 241, 241)    ;
-    color: #3e3d3d;
+  padding: 10px 0px 10px 15px;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 300;
+  border-radius: 4px;
+  background-color: rgb(241, 241, 241);
+  color: #3e3d3d;
 }
 
-#message{
-    /* height: 100px; */
-    padding-bottom: 63px;
+.Register .Input h5 {
+  font-weight: 400;
+}
+
+#message {
+  padding-bottom: 63px;
 }
 
 .Input input:focus {
@@ -112,7 +105,7 @@
 .Input__note textarea:focus {
   border: 1px solid #00bfa6;
 }
-.input{
+.input {
   position: relative;
 }
 .Input:last-child {
@@ -136,18 +129,17 @@
   visibility: visible;
 }
 .Submit {
-  font-size: 20px;
-  font-weight: 400;
-  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 300 !important;
   letter-spacing: 1px;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   -ms-border-radius: 2px;
-  border-radius: 10px;
+  border-radius: 8px;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
-  padding: 8px 15px !important;
+  padding: 14px 40px;
 }
 #Submit-contact {
   display: inline-block;
@@ -155,13 +147,12 @@
   background-color: rgb(76, 31, 87);
   outline: 0;
   cursor: pointer;
-  text-decoration: none !important;
   position: relative;
   z-index: -20;
   overflow: hidden;
 }
 
-@media (max-width: 920px){
+@media (max-width: 920px) {
   .Title-content {
     font-size: 50px;
   }
@@ -169,19 +160,19 @@
   .Container-page {
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto auto;
-    justify-items: center;  
-    align-items: center;  
+    justify-items: center;
+    align-items: center;
   }
-  .Register{
+  .Register {
     grid-column: 1;
   }
   .Container-InF {
     grid-column: 1;
-    justify-items: center;  
-    align-items: center; 
+    justify-items: center;
+    align-items: center;
   }
-  .Container-InF p{
-    justify-items: center;  
-    align-items: center; 
+  .Container-InF p {
+    justify-items: center;
+    align-items: center;
   }
 }
