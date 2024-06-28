@@ -117,7 +117,7 @@ window.addEventListener("scroll", reveal);
 
 //FORM REGISTER - Page Contact
 const usernameEle = document.getElementById('username');
-const emailEle = document.getElementById('email');
+const emailEle = document.getElementById('email-user');
 const messageEle = document.getElementById('message');
 
 const SubmitContact = document.getElementById('Submit-contact');
