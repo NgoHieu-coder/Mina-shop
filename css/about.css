@@ -201,3 +201,10 @@
       margin: 0;
     }
   }
+
+  @media (max-width: 555px){
+    .Title-content {
+      font-size: 35px;
+      line-height: 35px;
+    }
+  }
