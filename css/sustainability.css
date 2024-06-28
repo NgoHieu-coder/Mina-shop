@@ -1,87 +1,186 @@
-.Image_T-S img {
+/*---------Start 1--------*/
+.Title {
   position: relative;
-  filter: brightness(80%);
-  width: 100%;
-  height: 404px;
+  text-align: center;
 }
 
-.Content_T {
+.Title-content {
   position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
   font-size: 88px;
   font-weight: 500;
   color: rgb(255, 255, 255);
-  top: 320px;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
-.Content_center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  margin: 150px 470px;
+.Background img {
+  width: 100%;
+  filter: brightness(80%);
 }
-.Content_center p {
-  font-size: 22px;
-  font-weight: 500;
-}
-/*-------     ------*/
-.Container_f {
+/*--------END 1---------*/
+
+
+
+/*--------Start 2--------*/
+.Introduce {
   display: grid;
-  grid-template-columns: 49% 49%;
-  grid-gap: 2%;
+  grid-template-columns: auto;
+  justify-items: center;  
+  align-items: center;    
 }
 
-.Content_W-E {
-  grid-column: 2;
+.Introduce p {  
+  width: 606px;
+  height: 89.25px;
+  font-size: 24px;
+  font-weight: 500;
+  color: rgb(25, 25, 25);
+  text-align: center;
+  margin: 120px 0;
 }
-.Content_W-E h1 {
+
+/*-----------END 2-----------*/
+
+
+/*-----------Start 3---------*/
+.Container-page{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto auto;
+}
+
+.WE-picture{
+  grid-row: 1;
   grid-column: 1;
-  width: 502.986px;
-  height: 59.514px;
+}
+.WE-picture img{
+  width: 598px;
+  height: 816.200px;
+  float: right;
+}
+.Container-WE{
+  grid-row: 1;
+  grid-column: 2;
+  margin: 200px 0 0 100px;  
+}
+.Container-WE h3{
   font-size: 48px;
-  color: rgb(26, 26, 26);
-  margin: -600px 0 0 920px;
+  margin-bottom: 20px ;
 }
-.Content_1 {
-  width: 399.986px;
-  height: 259.125px;
+.WE-content {
   font-size: 18px;
   font-weight: 400;
   color: rgb(93, 87, 94);
-  margin: 20px 0 0 920px;
+  width: 391.1px;
+  height: 259.2px;
 }
-
-.Image_W-E img {
+/*...............................*/
+.Container-M{
   grid-column: 1;
-  max-width: 100%;
-  width: 558px;
-  height: auto;
-  object-fit: cover;
-  margin: 0 0 0 180px;
+  grid-row: 2;
+  margin-top: 200px;
+  width: 458px;
+  height: 201.6px;
+  float: right;
 }
-
-.Content_M {
-  grid-column: 1;
-  width: 26.7%;
-  font-size: x-large;
-  margin: -450px 0 200px 170px;
+.Container-M h3{
+  font-size: 48px;
+  margin-bottom: 20px;
 }
-.Content_M h1 {
-  font-size: 1.8em;
-  margin-bottom: 10px;
-}
-.Content_M p {
-  font-weight: 400;
+.M-content{
   font-size: 18px;
+  font-weight: 400;
   color: rgb(93, 87, 94);
 }
-
-.Image_M img {
-  width: 550px;
-  height: auto;
-  object-fit: cover;
+.M-picture{
+  grid-row: 2;
   grid-column: 2;
-  margin: 350px 300px 70px 740px;
+}
+.M-picture img{
+  width: 606px;
+  height: 544.062px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+/*-------------END 3--------------*/
+
+
+@media (max-width: 1195px){
+  .WE-picture img{
+    width: 100%;
+    height: auto;
+  }
+  .WE-content{
+    width: 80%;
+    height: auto;
+  }
+  .M-picture img{
+    width: 100%;
+    height: auto;
+  }
+  .Container-M{
+    width: 80%;
+    height: auto;
+  }
+}
+
+@media (max-width: 920px){
+  .Title-content {
+    font-size: 50px;
+  }
+  .Introduce p{
+    width: 328px;
+    height: 148.75px;
+  }
+  .Container-page{
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+    justify-items: center;  
+    align-items: center;  
+  }
+  .WE-picture{
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .WE-picture img{
+    width: 328px;
+    height: 313px;
+    float: none;
+  }
+  .Container-WE{
+    grid-column: 1;
+    grid-row: 2;
+    margin: 50px 0;  
+  }
+  .Container-WE h3{
+    font-size: 36px;
+    margin-bottom: 10px ;
+  }
+  .WE-content {
+    width: 328px;
+    height: 313px;
+  }
+  /*...............................*/
+  .Container-M{
+    width: 328px;
+    height: 313px;
+    grid-column: 1;
+    grid-row: 4;
+    margin: 50px 0;
+  }
+  .Container-M h3{
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+  .M-picture{
+    grid-column: 1;
+    grid-row: 3;
+  }
+  .M-picture img{
+    width: 328px;
+    height: 313px;
+    margin: 0;
+  }
 }
