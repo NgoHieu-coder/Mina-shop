@@ -18,7 +18,7 @@ if (emailInput) {
   submitEmailBtn.addEventListener("click", function () {
     const email = emailInput.value;
     if (email.length === 0) {
-      emailInput.placeholder = "Email is required !!!";
+      emailInput.placeholder = "Email is required!";
       alert("Email is required!");
     }
   });
@@ -114,7 +114,6 @@ function reveal() {
 
 window.addEventListener("scroll", reveal);
 
-
 //FORM REGISTER - Page Contact
 const usernameEle = document.getElementById('username');
 const emailEle = document.getElementById('emailuser');
@@ -149,6 +148,7 @@ function checkValidate() {
     setSuccess(usernameEle);
   }
 
+
   if (emailEle && emailValue == '') {
     setError(emailEle, 'This field is required');
     isCheck = false;
@@ -182,5 +182,6 @@ function setError(ele, message) {
 function isEmail(emailuser) {
   return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
     emailuser
+
   );
 }
