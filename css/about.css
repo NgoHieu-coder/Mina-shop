@@ -84,11 +84,12 @@
     width: 458px;
     height: 201.6px;
     float: right;
+    padding-left: 120px;
   }
   .Container-S h3{
     font-size: 48px;
   }
-  .S-content{
+  .Sustainability {
     font-size: 18px;
     font-weight: 400;
     color: rgb(93, 87, 94);
@@ -140,6 +141,7 @@
     .Container-S{
       width: 100%;
       height: auto;
+      padding-left:0 ;
     }
   }
   
@@ -150,6 +152,7 @@
     .Introduce p{
       width: 328px;
       height: 148.75px;
+      margin: 50px 0;
     }
     .Container-page{
       grid-template-columns: 1fr;
