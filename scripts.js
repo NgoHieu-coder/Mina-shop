@@ -117,69 +117,70 @@ window.addEventListener("scroll", reveal);
 
 //FORM REGISTER - Page Contact
 const usernameEle = document.getElementById('username');
-const emailEle = document.getElementById('email-user');
+const emailEle = document.getElementById('emailuser');
 const messageEle = document.getElementById('message');
-
-const SubmitContact = document.getElementById('Submit-contact');
+const submitEle = document.getElementById('submit');
 const inputEles = document.querySelectorAll('.Input');
 
-SubmitContact.addEventListener('click', function () {
+if (submitEle) {
+  submitEle.addEventListener('click', function () {
     Array.from(inputEles).map((ele) =>
-        ele.classList.remove('success', 'error')
+      ele.classList.remove('success', 'error')
     );
     let isValid = checkValidate();
 
     if (isValid) {
-        alert('Successfully');
+      alert('Successfully');
     }
-});
+  });
+}
 
 function checkValidate() {
-    let usernameValue = usernameEle.value;
-    let emailValue = emailEle.value;
-    let messageValue = messageEle.value;
+  let usernameValue = usernameEle ? usernameEle.value : '';
+  let emailValue = emailEle ? emailEle.value : '';
+  let messageValue = messageEle ? messageEle.value : '';
 
-    let isCheck = true;
+  let isCheck = true;
 
-    if (usernameValue == '') {
-        setError(usernameEle, 'This field is required');
-        isCheck = false;
-    } else {
-        setSuccess(usernameEle);
-    }
+  if (usernameEle && usernameValue == '') {
+    setError(usernameEle, 'This field is required');
+    isCheck = false;
+  } else {
+    setSuccess(usernameEle);
+  }
 
-    if (emailValue == '') {
-        setError(emailEle, 'This field is required');
-        isCheck = false;
-    } else if (!isEmail(emailValue)) {
-        setError(emailEle, 'Please enter a valid email address');
-        isCheck = false;
-    } else {
-        setSuccess(emailEle);
-    }
+  if (emailEle && emailValue == '') {
+    setError(emailEle, 'This field is required');
+    isCheck = false;
+  } else if (emailEle && !isEmail(emailValue)) {
+    setError(emailEle, 'Please enter a valid email address');
+    isCheck = false;
+  } else {
+    setSuccess(emailEle);
+  }
 
-    if (messageValue == '') {
-        setError(messageEle, 'This field is required');
-        isCheck = false;
-    } else {
-        setSuccess(messageEle);
-    }
+  if (messageEle && messageValue == '') {
+    setError(messageEle, 'This field is required');
+    isCheck = false;
+  } else {
+    setSuccess(messageEle);
+  }
 
-    return isCheck;
+  return isCheck;
 }
 
 function setSuccess(ele) {
-    ele.parentNode.classList.add('success');
+  ele.parentNode.classList.add('success');
 }
 
 function setError(ele, message) {
-    let parentEle = ele.parentNode;
-    parentEle.classList.add('error');
-    parentEle.querySelector('small').innerText = message;
+  let parentEle = ele.parentNode;
+  parentEle.classList.add('error');
+  parentEle.querySelector('small').innerText = message;
 }
 
-function isEmail(email) {
-    return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
-        email
-    );
+function isEmail(emailuser) {
+  return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
+    emailuser
+  );
 }

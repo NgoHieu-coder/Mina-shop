@@ -153,6 +153,7 @@
     grid-column: 1;
     grid-row: 2;
     margin: 50px 0;  
+    padding-left: 120px;
   }
   .Container-WE h3{
     font-size: 36px;
@@ -168,7 +169,8 @@
     height: 313px;
     grid-column: 1;
     grid-row: 4;
-    margin: 50px 0;
+    margin-top: 50px;
+    margin-bottom: 150px;
   }
   .Container-M h3{
     font-size: 36px;
