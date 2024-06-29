@@ -138,15 +138,17 @@
   -o-transition: 0.5s;
   transition: 0.5s;
   padding: 14px 40px;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
 }
-#submit {
+#SubmitId {
   display: inline-block;
   color: #fff;
   background-color: rgb(76, 31, 87);
   outline: 0;
   cursor: pointer;
   position: relative;
-  z-index: -20;
+  z-index: 0;
   overflow: hidden;
 }
 
