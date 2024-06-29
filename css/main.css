@@ -246,7 +246,8 @@ header .icons {
 .shopButton button,
 #signUp .shopButton button,
 #homeInfor .inforBox .learnButton button,
-#insta .instaButton button {
+#insta .instaButton button,
+.Submit {
   border-radius: 8px;
   font-weight: 300;
   font-size: 16px;
@@ -257,7 +258,8 @@ header .icons {
 .shopButton button::before,
 #signUp .shopButton button::before,
 #homeInfor .inforBox .learnButton button::before,
-#insta .instaButton button::before {
+#insta .instaButton button::before,
+.Submit::before {
   content: "";
   position: absolute;
   top: 0;
@@ -445,12 +447,14 @@ header .icons {
   margin-top: 35px;
 }
 #homeInfor .inforBox .learnButton button::before,
-#insta .instaButton button::before {
+#insta .instaButton button::before,
+.Submit::before {
   background: #fff;
   border-radius: 8px;
 }
 #homeInfor .inforBox .learnButton button:hover::before,
-#insta .instaButton button:hover::before {
+#insta .instaButton button:hover::before,
+.Submit:hover::before {
   width: 100%;
   left: 0;
   border: 2px solid #fff;
@@ -458,7 +462,8 @@ header .icons {
 }
 
 #homeInfor .inforBox .learnButton button:hover,
-#insta .instaButton button:hover {
+#insta .instaButton button:hover,
+.Submit:hover {
   color: rgb(76, 31, 89);
   border-radius: 8px;
   border: 2px solid rgb(76, 31, 89);
