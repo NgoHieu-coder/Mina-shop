@@ -65,6 +65,11 @@ body {
   opacity: 1;
 }
 
+.markPage {
+  border-bottom: 1.5px solid #000;
+  cursor: pointer;
+}
+
 /* Begin: header */
 header {
   position: fixed;
@@ -97,8 +102,7 @@ nav a {
   font-size: 16px;
 }
 
-nav .menu a:hover,
-nav .menu a:active {
+nav .menu a:hover {
   border-bottom: 1.5px solid #000;
   cursor: pointer;
 }
