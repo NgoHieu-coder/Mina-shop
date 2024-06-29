@@ -126,12 +126,15 @@ function reveal() {
 
 window.addEventListener("scroll", reveal);
 
+
+
 //FORM REGISTER - Page Contact
-const usernameEle = document.getElementById("username");
-const emailEle = document.getElementById("emailuser");
-const messageEle = document.getElementById("message");
-const submitEle = document.getElementById("submit");
-const inputEles = document.querySelectorAll(".Input");
+
+const usernameEle = document.getElementById('username');
+const emailuserEle = document.getElementById('emailuser');
+const messageEle = document.getElementById('message');
+const submitEle = document.getElementById('SubmitId');
+const inputEles = document.querySelectorAll('.Input');
 
 if (submitEle) {
   submitEle.addEventListener("click", function () {
@@ -147,31 +150,37 @@ if (submitEle) {
 }
 
 function checkValidate() {
-  let usernameValue = usernameEle ? usernameEle.value : "";
-  let emailValue = emailEle ? emailEle.value : "";
-  let messageValue = messageEle ? messageEle.value : "";
+
+  let usernameValue = usernameEle ? usernameEle.value : '';
+  let emailuserValue = emailuserEle ? emailuserEle.value : '';
+  let messageValue = messageEle ? messageEle.value : '';
 
   let isCheck = true;
 
-  if (usernameEle && usernameValue == "") {
-    setError(usernameEle, "This field is required");
+  if (usernameEle && usernameValue == '') {
+    alert("Name must be filled out");
+    
     isCheck = false;
   } else {
     setSuccess(usernameEle);
   }
 
-  if (emailEle && emailValue == "") {
-    setError(emailEle, "This field is required");
+
+
+  if (emailuserEle && emailuserValue == '') {
+    alert("Email must be filled out");
     isCheck = false;
-  } else if (emailEle && !isEmail(emailValue)) {
-    setError(emailEle, "Please enter a valid email address");
+  } else if (emailuserEle && !isEmail(emailuserValue)) {
+    alert("Invalid email format");
+    
     isCheck = false;
   } else {
-    setSuccess(emailEle);
+    setSuccess(emailuserEle);
   }
 
-  if (messageEle && messageValue == "") {
-    setError(messageEle, "This field is required");
+
+  if (messageEle && messageValue == '') {
+    alert("Message must be filled out");
     isCheck = false;
   } else {
     setSuccess(messageEle);
