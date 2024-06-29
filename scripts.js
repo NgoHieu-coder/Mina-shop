@@ -107,7 +107,7 @@ closeIcon.onclick = () => {
   enableScroll();
 };
 
-//ANIMATION SCROLL DOWN
+//ANIMATION SCROLLING
 function reveal() {
   var reveals = document.querySelectorAll(".reveal");
 
@@ -126,15 +126,12 @@ function reveal() {
 
 window.addEventListener("scroll", reveal);
 
-
-
 //FORM REGISTER - Page Contact
-
-const usernameEle = document.getElementById('username');
-const emailuserEle = document.getElementById('emailuser');
-const messageEle = document.getElementById('message');
-const submitEle = document.getElementById('SubmitId');
-const inputEles = document.querySelectorAll('.Input');
+const usernameEle = document.getElementById("username");
+const emailuserEle = document.getElementById("emailuser");
+const messageEle = document.getElementById("message");
+const submitEle = document.getElementById("SubmitId");
+const inputEles = document.querySelectorAll(".Input");
 
 if (submitEle) {
   submitEle.addEventListener("click", function () {
@@ -150,36 +147,32 @@ if (submitEle) {
 }
 
 function checkValidate() {
-
-  let usernameValue = usernameEle ? usernameEle.value : '';
-  let emailuserValue = emailuserEle ? emailuserEle.value : '';
-  let messageValue = messageEle ? messageEle.value : '';
+  let usernameValue = usernameEle ? usernameEle.value : "";
+  let emailuserValue = emailuserEle ? emailuserEle.value : "";
+  let messageValue = messageEle ? messageEle.value : "";
 
   let isCheck = true;
 
-  if (usernameEle && usernameValue == '') {
+  if (usernameEle && usernameValue == "") {
     alert("Name must be filled out");
-    
+
     isCheck = false;
   } else {
     setSuccess(usernameEle);
   }
 
-
-
-  if (emailuserEle && emailuserValue == '') {
+  if (emailuserEle && emailuserValue == "") {
     alert("Email must be filled out");
     isCheck = false;
   } else if (emailuserEle && !isEmail(emailuserValue)) {
     alert("Invalid email format");
-    
+
     isCheck = false;
   } else {
     setSuccess(emailuserEle);
   }
 
-
-  if (messageEle && messageValue == '') {
+  if (messageEle && messageValue == "") {
     alert("Message must be filled out");
     isCheck = false;
   } else {
