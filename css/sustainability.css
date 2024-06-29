@@ -83,7 +83,7 @@
   margin-top: 200px;
   width: 458px;
   height: 201.6px;
-  float: right;
+  padding-left: 140px;
 }
 .Container-M h3{
   font-size: 48px;
@@ -123,6 +123,7 @@
   .Container-M{
     width: 80%;
     height: auto;
+    padding-left: 0;
   }
 }
 
@@ -153,7 +154,6 @@
     grid-column: 1;
     grid-row: 2;
     margin: 50px 0;  
-    padding-left: 120px;
   }
   .Container-WE h3{
     font-size: 36px;

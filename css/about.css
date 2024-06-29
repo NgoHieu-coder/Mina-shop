@@ -104,24 +104,25 @@
     margin-top: 100px;
     margin-bottom: 100px;
   }
-  .button a{
+  .button a {
     color: aliceblue;
-}
-.button {  
+    font-size: 16px;
+    font-weight: 400;
+  }
+  .button {
     grid-column: 1;
-    font-size: 15px;
     padding: 15px 45px;
     background-color: rgb(76, 31, 89);
     width: 194px;
     height: 57px;
-    border-radius: 10px;
+    border-radius: 8px;
     -webkit-transition-duration: 0.4s;
-     transition-duration: 0.4s;
-     margin-top: 50px;
-}
-.button:hover {  
-    background-color: rgb(0, 0, 0); 
-}
+    transition-duration: 0.4s;
+    margin-top: 50px;
+  }
+  .button:hover {  
+      background-color: rgb(0, 0, 0); 
+  }
   /*-------------END 3--------------*/
   
   
@@ -188,7 +189,7 @@
       height: 313px;
       grid-column: 1;
       grid-row: 4;
-      margin: 50px 0;
+      margin: 50px 0 100px 0;
     }
     .Container-S h3{
       font-size: 36px;
