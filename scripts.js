@@ -45,6 +45,18 @@ openButton.addEventListener("click", () => {
   }
 });
 
+//PREVENT SCROLLING
+function disableScroll() {
+  scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+  window.onscroll = function () {
+    window.scrollTo(scrollLeft, scrollTop);
+  };
+}
+function enableScroll() {
+  window.onscroll = function () {};
+}
+
 // NAV MENU RESPONSIVE
 if (window.innerWidth < 730) {
   // SUBMENU
@@ -61,7 +73,7 @@ if (window.innerWidth < 730) {
     console.log(subnav.style.maxHeight);
   });
 
-  // CART BOX
+  // CART BOX - Responsive
   cartIcon.onclick = () => {
     cartBox.classList.toggle("active");
     menu.style.display = "none";
@@ -69,8 +81,10 @@ if (window.innerWidth < 730) {
     menuIcon.classList.remove("fa-xmark", "nav__close");
     if (cartBox.classList.contains("active")) {
       overlay.style.display = "block";
+      disableScroll();
     } else {
       overlay.style.display = "none";
+      enableScroll();
     }
   };
 }
@@ -80,19 +94,17 @@ navCart.onclick = () => {
   cartBox.classList.toggle("active");
   if (cartBox.classList.contains("active")) {
     overlay.style.display = "block";
+    disableScroll();
   } else {
     overlay.style.display = "none";
+    enableScroll();
   }
 };
 
 closeIcon.onclick = () => {
   cartBox.classList.remove("active");
   overlay.style.display = "none";
-};
-
-window.onscroll = () => {
-  cartBox.classList.remove("active");
-  overlay.style.display = "none";
+  enableScroll();
 };
 
 //ANIMATION SCROLL DOWN
@@ -115,52 +127,51 @@ function reveal() {
 window.addEventListener("scroll", reveal);
 
 //FORM REGISTER - Page Contact
-const usernameEle = document.getElementById('username');
-const emailEle = document.getElementById('emailuser');
-const messageEle = document.getElementById('message');
-const submitEle = document.getElementById('submit');
-const inputEles = document.querySelectorAll('.Input');
+const usernameEle = document.getElementById("username");
+const emailEle = document.getElementById("emailuser");
+const messageEle = document.getElementById("message");
+const submitEle = document.getElementById("submit");
+const inputEles = document.querySelectorAll(".Input");
 
 if (submitEle) {
-  submitEle.addEventListener('click', function () {
+  submitEle.addEventListener("click", function () {
     Array.from(inputEles).map((ele) =>
-      ele.classList.remove('success', 'error')
+      ele.classList.remove("success", "error")
     );
     let isValid = checkValidate();
 
     if (isValid) {
-      alert('Successfully');
+      alert("Successfully");
     }
   });
 }
 
 function checkValidate() {
-  let usernameValue = usernameEle ? usernameEle.value : '';
-  let emailValue = emailEle ? emailEle.value : '';
-  let messageValue = messageEle ? messageEle.value : '';
+  let usernameValue = usernameEle ? usernameEle.value : "";
+  let emailValue = emailEle ? emailEle.value : "";
+  let messageValue = messageEle ? messageEle.value : "";
 
   let isCheck = true;
 
-  if (usernameEle && usernameValue == '') {
-    setError(usernameEle, 'This field is required');
+  if (usernameEle && usernameValue == "") {
+    setError(usernameEle, "This field is required");
     isCheck = false;
   } else {
     setSuccess(usernameEle);
   }
 
-
-  if (emailEle && emailValue == '') {
-    setError(emailEle, 'This field is required');
+  if (emailEle && emailValue == "") {
+    setError(emailEle, "This field is required");
     isCheck = false;
   } else if (emailEle && !isEmail(emailValue)) {
-    setError(emailEle, 'Please enter a valid email address');
+    setError(emailEle, "Please enter a valid email address");
     isCheck = false;
   } else {
     setSuccess(emailEle);
   }
 
-  if (messageEle && messageValue == '') {
-    setError(messageEle, 'This field is required');
+  if (messageEle && messageValue == "") {
+    setError(messageEle, "This field is required");
     isCheck = false;
   } else {
     setSuccess(messageEle);
@@ -170,18 +181,17 @@ function checkValidate() {
 }
 
 function setSuccess(ele) {
-  ele.parentNode.classList.add('success');
+  ele.parentNode.classList.add("success");
 }
 
 function setError(ele, message) {
   let parentEle = ele.parentNode;
-  parentEle.classList.add('error');
-  parentEle.querySelector('small').innerText = message;
+  parentEle.classList.add("error");
+  parentEle.querySelector("small").innerText = message;
 }
 
 function isEmail(emailuser) {
   return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
     emailuser
-
   );
 }
